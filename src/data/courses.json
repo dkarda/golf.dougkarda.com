@@ -1,0 +1,29 @@
+[
+  {
+    "id": "40977ee8-33ee-4195-b6a2-99a4ca83c2bc",
+    "name": "Pebble Beach Golf Links",
+    "city": "Pebble Beach",
+    "state": "CA",
+    "why": "The clifftop finishing holes and public access make this the bucket-list round.",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "b25a4e85-561a-4ca4-8028-7c3480c9bbc0",
+    "name": "Pinehurst No. 2",
+    "city": "Pinehurst",
+    "state": "NC",
+    "why": "Turtleback greens and a US Open stage — a masterclass in recovery golf.",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "9b9891db-3b45-48db-892f-149601b79d52",
+    "name": "Torrey Pines South Course",
+    "city": "San Diego",
+    "state": "CA",
+    "why": "Municipal golf on the Pacific, with a US Open test you can still get a tee time for.",
+    "photos": [],
+    "featured": true
+  }
+]

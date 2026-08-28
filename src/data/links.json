@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Rick Shiels Golf",
+    "url": "https://www.youtube.com/@RickShielsGolf",
+    "kind": "youtube",
+    "description": "Club tests, course vlogs, and accessible instruction.",
+    "recommended": true
+  },
+  {
+    "title": "Me and My Golf",
+    "url": "https://www.youtube.com/@MeAndMyGolf",
+    "kind": "youtube",
+    "description": "Simple drills for full swing, short game, and putting.",
+    "recommended": true
+  },
+  {
+    "title": "Danny Maude",
+    "url": "https://www.youtube.com/@DannyMaude",
+    "kind": "youtube",
+    "description": "Feel-based swing thoughts without the jargon pile-on."
+  },
+  {
+    "title": "USGA",
+    "url": "https://www.usga.org/",
+    "kind": "website",
+    "description": "Rules, handicapping, and championships.",
+    "recommended": true
+  },
+  {
+    "title": "PGA Tour",
+    "url": "https://www.pgatour.com/",
+    "kind": "website",
+    "description": "Schedules, leaderboards, and course previews."
+  },
+  {
+    "title": "Golf Digest",
+    "url": "https://www.golfdigest.com/",
+    "kind": "website",
+    "description": "Instruction, equipment, and course rankings."
+  }
+]
