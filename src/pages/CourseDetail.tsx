@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import CopyIdButton from '../components/CopyIdButton'
 import ScorecardTable from '../components/ScorecardTable'
 import { PageHeader } from '../components/ui'
-import { curatedCourses } from '../lib/courses'
+import { courseImageUrls, useCuratedCourses } from '../lib/courses'
 import { courseDisplayName, getCourse } from '../lib/opengolf'
 import type { CourseDetail } from '../types'
 
@@ -19,6 +19,19 @@ export default function CourseDetailPage() {
     )
   }
   return <CourseDetailBody key={id} id={id} />
+}
+
+function CoursePhoto({ src }: { src: string }) {
+  const [failed, setFailed] = useState(false)
+  if (failed) return null
+  return (
+    <img
+      src={src}
+      alt=""
+      onError={() => setFailed(true)}
+      className="h-56 w-full rounded-lg object-cover"
+    />
+  )
 }
 
 function CourseDetailBody({ id }: { id: string }) {
@@ -39,11 +52,12 @@ function CourseDetailBody({ id }: { id: string }) {
     }
   }, [id])
 
-  const mine = curatedCourses.find((c) => c.id === id)
-  const photos = mine?.photos?.filter(Boolean) ?? []
-  const extraImages = [mine?.scorecardImage, mine?.mapImage].filter(
-    (src): src is string => Boolean(src),
-  )
+  const myCoursesState = useCuratedCourses()
+  const mine =
+    myCoursesState.status === 'ready'
+      ? myCoursesState.courses.find((c) => c.id === id)
+      : undefined
+  const photos = mine ? courseImageUrls(mine) : []
 
   if (error) {
     return (
@@ -85,12 +99,6 @@ function CourseDetailBody({ id }: { id: string }) {
           {course.holes != null ? ` · ${course.holes} holes` : ''}
         </p>
       </PageHeader>
-
-      {mine?.why && (
-        <p className="mb-6 rounded-xl border border-gold/30 bg-gold/10 p-4">
-          {mine.why}
-        </p>
-      )}
 
       <dl className="mb-8 grid gap-3 text-sm sm:grid-cols-2">
         {course.address && (
@@ -149,17 +157,12 @@ function CourseDetailBody({ id }: { id: string }) {
         )}
       </div>
 
-      {(photos.length > 0 || extraImages.length > 0) && (
+      {photos.length > 0 && (
         <div className="mb-8">
           <h2 className="font-display mb-3 text-2xl text-fairway">Photos</h2>
           <div className="grid gap-3 sm:grid-cols-2">
-            {[...photos, ...extraImages].map((src) => (
-              <img
-                key={src}
-                src={src}
-                alt=""
-                className="h-56 w-full rounded-lg object-cover"
-              />
+            {photos.map((src) => (
+              <CoursePhoto key={src} src={src} />
             ))}
           </div>
         </div>

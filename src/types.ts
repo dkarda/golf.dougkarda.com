@@ -58,14 +58,19 @@ export type GolfBag = {
 
 export type MyCourse = {
   id?: string | null
-  name: string
-  city?: string
+  course: string
+  holes?: string | number
+  played?: string
+  address?: string
   state?: string
-  why?: string
-  photos?: string[]
-  scorecardImage?: string
-  mapImage?: string
-  featured?: boolean
+  region?: string
+  phone?: string
+  website?: string
+  teetime?: string
+  logoBallImg?: string
+  mainImg?: string
+  scorecard?: string
+  courseMap?: string
 }
 
 export type LinkKind = 'youtube' | 'website'

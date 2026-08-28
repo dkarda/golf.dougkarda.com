@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { CardLink, SectionLabel } from '../components/ui'
 import links from '../data/links.json'
 import { formatLoft, snapshotClubs, useGolfBag } from '../lib/bag'
-import { curatedCourses } from '../lib/courses'
+import { coursePlace, courseTitle, useCuratedCourses } from '../lib/courses'
 import { BAG_CATEGORY_LABEL } from '../lib/labels'
 import { loadNotes } from '../lib/notes'
 import type { GolfLink } from '../types'
@@ -11,7 +11,9 @@ const allLinks = links as GolfLink[]
 
 export default function Home() {
   const bagState = useGolfBag()
-  const featured = curatedCourses.filter((c) => c.featured).slice(0, 3)
+  const coursesState = useCuratedCourses()
+  const featured =
+    coursesState.status === 'ready' ? coursesState.courses.slice(0, 3) : []
   const latestNotes = loadNotes().slice(0, 3)
   const snapshot =
     bagState.status === 'ready' ? snapshotClubs(bagState.bag, 4) : []
@@ -40,18 +42,24 @@ export default function Home() {
             All courses
           </Link>
         </div>
-        <div className="grid gap-4 sm:grid-cols-3">
-          {featured.map((course) => (
-            <CardLink
-              key={course.id}
-              to={`/courses/${course.id}`}
-              title={course.name}
-              meta={[course.city, course.state].filter(Boolean).join(', ')}
-            >
-              {course.why}
-            </CardLink>
-          ))}
-        </div>
+        {coursesState.status === 'loading' && (
+          <p className="text-sm text-ink/70">Loading courses…</p>
+        )}
+        {coursesState.status === 'error' && (
+          <p className="text-sm text-ink/70">{coursesState.message}</p>
+        )}
+        {coursesState.status === 'ready' && (
+          <div className="grid gap-4 sm:grid-cols-3">
+            {featured.map((course) => (
+              <CardLink
+                key={course.id}
+                to={`/courses/${course.id}`}
+                title={courseTitle(course)}
+                meta={coursePlace(course)}
+              />
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="mb-12">

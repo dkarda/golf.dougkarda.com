@@ -1,7 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CardLink, PageHeader, SectionLabel } from '../components/ui'
-import { curatedCourses } from '../lib/courses'
+import {
+  coursePlace,
+  courseTitle,
+  useCuratedCourses,
+} from '../lib/courses'
 import { courseDisplayName, searchCourses } from '../lib/opengolf'
 import type { CourseSearchHit } from '../types'
 
@@ -41,7 +45,10 @@ export default function Courses() {
   const results =
     searching && fetched?.q === debounced && !fetched.error ? fetched.hits : []
 
-  const myIds = useMemo(() => new Set(curatedCourses.map((c) => c.id)), [])
+  const myCoursesState = useCuratedCourses()
+  const myCourses =
+    myCoursesState.status === 'ready' ? myCoursesState.courses : []
+  const myIds = useMemo(() => new Set(myCourses.map((c) => c.id)), [myCourses])
 
   return (
     <section className="mx-auto max-w-5xl px-4 py-10">
@@ -53,18 +60,24 @@ export default function Courses() {
       </PageHeader>
 
       <SectionLabel>My Courses</SectionLabel>
-      <div className="mb-10 grid gap-4 sm:grid-cols-2">
-        {curatedCourses.map((course) => (
-          <CardLink
-            key={course.id}
-            to={`/courses/${course.id}`}
-            title={course.name}
-            meta={[course.city, course.state].filter(Boolean).join(', ')}
-          >
-            {course.why}
-          </CardLink>
-        ))}
-      </div>
+      {myCoursesState.status === 'loading' && (
+        <p className="mb-10 text-sm text-ink/70">Loading courses…</p>
+      )}
+      {myCoursesState.status === 'error' && (
+        <p className="mb-10 text-sm text-ink/70">{myCoursesState.message}</p>
+      )}
+      {myCoursesState.status === 'ready' && (
+        <div className="mb-10 grid gap-4 sm:grid-cols-2">
+          {myCourses.map((course) => (
+            <CardLink
+              key={course.id}
+              to={`/courses/${course.id}`}
+              title={courseTitle(course)}
+              meta={coursePlace(course)}
+            />
+          ))}
+        </div>
+      )}
 
       <SectionLabel>Search any US course</SectionLabel>
       <label className="mb-4 block">
