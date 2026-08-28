@@ -1,0 +1,11 @@
+# Serve existing static files directly, bypass Passenger
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+</IfModule>
+
+# Ensure correct MIME types
+AddType application/javascript .js
+AddType text/css .css
