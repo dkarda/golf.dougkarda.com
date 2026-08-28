@@ -8,7 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# dist is committed so a git pull / full-folder upload to LiteSpeed
+# includes the production build (this host's docroot is the repo root).
 dist-ssr
 *.local
 
