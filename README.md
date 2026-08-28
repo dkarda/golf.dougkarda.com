@@ -1,6 +1,11 @@
 # Get Golf Course ID from DB
 - https://api.opengolfapi.org/v1/courses/search?q=YOUR+COURSE+NAME
 
+# Links
+- Recommended channels and sites from src/data/links.json. Swap them whenever the list changes.
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -1,10 +1,9 @@
 [
   {
-    "title": "Rick Shiels Golf",
-    "url": "https://www.youtube.com/@RickShielsGolf",
+    "title": "Danny Maude",
+    "url": "https://www.youtube.com/@DannyMaude",
     "kind": "youtube",
-    "description": "Club tests, course vlogs, and accessible instruction.",
-    "recommended": true
+    "description": "Feel-based swing thoughts without the jargon pile-on."
   },
   {
     "title": "Me and My Golf",
@@ -14,10 +13,18 @@
     "recommended": true
   },
   {
-    "title": "Danny Maude",
-    "url": "https://www.youtube.com/@DannyMaude",
+    "title": "Padraig Harrington",
+    "url": "https://www.youtube.com/@PadraigHarringtonOfficial",
     "kind": "youtube",
-    "description": "Feel-based swing thoughts without the jargon pile-on."
+    "description": "Official YouTube channel of 3x champion and 25-year European and PGA tour veteran, Padraig Harrington.",
+    "recommended": true
+  },
+  {
+    "title": "Rick Shiels Golf",
+    "url": "https://www.youtube.com/@RickShielsGolf",
+    "kind": "youtube",
+    "description": "Club tests, course vlogs, and accessible instruction.",
+    "recommended": true
   },
   {
     "title": "USGA",
@@ -31,6 +38,12 @@
     "url": "https://www.pgatour.com/",
     "kind": "website",
     "description": "Schedules, leaderboards, and course previews."
+  },
+  {
+    "title": "My Golf Spy",
+    "url": "https://mygolfspy.com/",
+    "kind": "website",
+    "description": "Our mission is to inform and protect the golf consumer. We want you to get the most out of your money, time and performance. That means providing you with reviews you can trust, as well as honest reporting on the latest issues affecting the game today."
   },
   {
     "title": "Golf Digest",
