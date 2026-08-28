@@ -1,18 +1,17 @@
 import { Link } from 'react-router-dom'
 import { CardLink, SectionLabel } from '../components/ui'
-import myCourses from '../data/courses.json'
 import links from '../data/links.json'
 import { formatLoft, snapshotClubs, useGolfBag } from '../lib/bag'
+import { curatedCourses } from '../lib/courses'
 import { BAG_CATEGORY_LABEL } from '../lib/labels'
 import { loadNotes } from '../lib/notes'
-import type { GolfLink, MyCourse } from '../types'
+import type { GolfLink } from '../types'
 
-const courses = myCourses as MyCourse[]
 const allLinks = links as GolfLink[]
 
 export default function Home() {
   const bagState = useGolfBag()
-  const featured = courses.filter((c) => c.featured).slice(0, 3)
+  const featured = curatedCourses.filter((c) => c.featured).slice(0, 3)
   const latestNotes = loadNotes().slice(0, 3)
   const snapshot =
     bagState.status === 'ready' ? snapshotClubs(bagState.bag, 4) : []

@@ -1,11 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CardLink, PageHeader, SectionLabel } from '../components/ui'
-import myCourses from '../data/courses.json'
+import { curatedCourses } from '../lib/courses'
 import { courseDisplayName, searchCourses } from '../lib/opengolf'
-import type { CourseSearchHit, MyCourse } from '../types'
-
-const curated = myCourses as MyCourse[]
+import type { CourseSearchHit } from '../types'
 
 export default function Courses() {
   const [query, setQuery] = useState('')
@@ -43,7 +41,7 @@ export default function Courses() {
   const results =
     searching && fetched?.q === debounced && !fetched.error ? fetched.hits : []
 
-  const myIds = useMemo(() => new Set(curated.map((c) => c.id)), [])
+  const myIds = useMemo(() => new Set(curatedCourses.map((c) => c.id)), [])
 
   return (
     <section className="mx-auto max-w-5xl px-4 py-10">
@@ -56,7 +54,7 @@ export default function Courses() {
 
       <SectionLabel>My Courses</SectionLabel>
       <div className="mb-10 grid gap-4 sm:grid-cols-2">
-        {curated.map((course) => (
+        {curatedCourses.map((course) => (
           <CardLink
             key={course.id}
             to={`/courses/${course.id}`}

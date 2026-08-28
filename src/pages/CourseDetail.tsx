@@ -3,13 +3,11 @@ import { Link, useParams } from 'react-router-dom'
 import CopyIdButton from '../components/CopyIdButton'
 import ScorecardTable from '../components/ScorecardTable'
 import { PageHeader } from '../components/ui'
-import myCourses from '../data/courses.json'
+import { curatedCourses } from '../lib/courses'
 import { courseDisplayName, getCourse } from '../lib/opengolf'
-import type { CourseDetail, MyCourse } from '../types'
+import type { CourseDetail } from '../types'
 
 const CourseMap = lazy(() => import('../components/CourseMap'))
-
-const curated = myCourses as MyCourse[]
 
 export default function CourseDetailPage() {
   const { id } = useParams()
@@ -41,7 +39,7 @@ function CourseDetailBody({ id }: { id: string }) {
     }
   }, [id])
 
-  const mine = curated.find((c) => c.id === id)
+  const mine = curatedCourses.find((c) => c.id === id)
   const photos = mine?.photos?.filter(Boolean) ?? []
   const extraImages = [mine?.scorecardImage, mine?.mapImage].filter(
     (src): src is string => Boolean(src),

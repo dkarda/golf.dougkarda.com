@@ -1,5 +1,59 @@
 [
   {
+    "id": "11db6866-4760-42c7-92f3-35382e23d5b2",
+    "name": "Bergen Point Golf Club",
+    "city": "Farmingdale",
+    "state": "NY",
+    "why": "",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "1d930d4d-7beb-48e6-9346-f3db01b70172",
+    "name": "Black At Bethpage State Park Golf Course",
+    "city": "Farmingdale",
+    "state": "NY",
+    "why": "",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "babc6173-2c9c-44ae-bd72-b5a35d8dc211",
+    "name": "Red At Bethpage State Park Golf Course",
+    "city": "Farmingdale",
+    "state": "NY",
+    "why": "",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "943ca4a8-a597-42d3-a640-38f4bffddda8",
+    "name": "Blue At Bethpage State Park Golf Course",
+    "city": "Farmingdale",
+    "state": "NY",
+    "why": "",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "d81b53dc-7c1f-407a-8bdb-9a38fde7b97f",
+    "name": "Green At Bethpage State Park Golf Course",
+    "city": "Farmingdale",
+    "state": "NY",
+    "why": "",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "9b08f119-c36f-4f8e-a350-244aa9b31e89",
+    "name": "Yellow At Bethpage State Park Golf Course",
+    "city": "Farmingdale",
+    "state": "NY",
+    "why": "",
+    "photos": [],
+    "featured": true
+  },
+  {
     "id": "40977ee8-33ee-4195-b6a2-99a4ca83c2bc",
     "name": "Pebble Beach Golf Links",
     "city": "Pebble Beach",
@@ -23,6 +77,51 @@
     "city": "San Diego",
     "state": "CA",
     "why": "Municipal golf on the Pacific, with a US Open test you can still get a tee time for.",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "c2e48dbb-173e-45cf-9ae6-084e5e6eb95d",
+    "name": "Willow Creek Golf Country Club",
+    "city": "Mt Sinai",
+    "state": "NY",
+    "why": "",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "77d3d8bb-08ef-4f46-9687-eaa670545430",
+    "name": "Wind Watch Golf Country Club",
+    "city": "Hauppauge",
+    "state": "NY",
+    "why": "",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "77ea5f4a-f3d4-483b-8e05-89c1eb299a2b",
+    "name": "Oyster Bay Town Golf Course",
+    "city": "Woodbury",
+    "state": "NY",
+    "why": "",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "90e38a03-46ea-47cb-8860-0c5be256a605",
+    "name": "Cherry Creek Golf Links",
+    "city": "Riverhead",
+    "state": "NY",
+    "why": "",
+    "photos": [],
+    "featured": true
+  },
+  {
+    "id": "ea9c74c9-781d-4acd-b331-4e9edaab1ab8",
+    "name": "Cherry Creek The Woods",
+    "city": "Riverhead",
+    "state": "NY",
+    "why": "",
     "photos": [],
     "featured": true
   }
