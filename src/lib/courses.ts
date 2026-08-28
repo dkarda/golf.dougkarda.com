@@ -46,6 +46,18 @@ export function resolveCourseImage(
   return `${COURSE_IMAGE_BASE}${image.replace(/^\//, '')}`
 }
 
+/** Curated `logoBallImg` files live under `images/golf/logoballs/`. */
+export function resolveLogoBallImage(
+  image: string | null | undefined,
+): string | undefined {
+  if (!image || image.trim() === '') return undefined
+  if (/^https?:\/\//i.test(image)) return image
+  const path = image.replace(/^\//, '')
+  return resolveCourseImage(
+    path.startsWith('logoballs/') ? path : `logoballs/${path}`,
+  )
+}
+
 export function courseImageUrls(course: MyCourse): string[] {
   const seen = new Set<string>()
   const urls: string[] = []

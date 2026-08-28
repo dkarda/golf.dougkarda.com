@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom'
-import { CardLink, SectionLabel } from '../components/ui'
+import { CardLink, LogoBall, SectionLabel } from '../components/ui'
 import links from '../data/links.json'
 import { formatLoft, snapshotClubs, useGolfBag } from '../lib/bag'
-import { coursePlace, courseTitle, useCuratedCourses } from '../lib/courses'
+import {
+  coursePlace,
+  courseTitle,
+  resolveLogoBallImage,
+  useCuratedCourses,
+} from '../lib/courses'
 import { BAG_CATEGORY_LABEL } from '../lib/labels'
 import { loadNotes } from '../lib/notes'
 import type { GolfLink } from '../types'
@@ -50,14 +55,18 @@ export default function Home() {
         )}
         {coursesState.status === 'ready' && (
           <div className="grid gap-4 sm:grid-cols-3">
-            {featured.map((course) => (
-              <CardLink
-                key={course.id}
-                to={`/courses/${course.id}`}
-                title={courseTitle(course)}
-                meta={coursePlace(course)}
-              />
-            ))}
+            {featured.map((course) => {
+              const logoSrc = resolveLogoBallImage(course.logoBallImg)
+              return (
+                <CardLink
+                  key={course.id}
+                  to={`/courses/${course.id}`}
+                  title={courseTitle(course)}
+                  meta={coursePlace(course)}
+                  leading={logoSrc ? <LogoBall src={logoSrc} /> : undefined}
+                />
+              )
+            })}
           </div>
         )}
       </section>

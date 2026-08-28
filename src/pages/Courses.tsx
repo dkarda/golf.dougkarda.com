@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CardLink, PageHeader, SectionLabel } from '../components/ui'
+import { CardLink, LogoBall, PageHeader, SectionLabel } from '../components/ui'
 import {
   coursePlace,
   courseTitle,
+  resolveLogoBallImage,
   useCuratedCourses,
 } from '../lib/courses'
 import { courseDisplayName, searchCourses } from '../lib/opengolf'
@@ -68,14 +69,18 @@ export default function Courses() {
       )}
       {myCoursesState.status === 'ready' && (
         <div className="mb-10 grid gap-4 sm:grid-cols-2">
-          {myCourses.map((course) => (
-            <CardLink
-              key={course.id}
-              to={`/courses/${course.id}`}
-              title={courseTitle(course)}
-              meta={coursePlace(course)}
-            />
-          ))}
+          {myCourses.map((course) => {
+            const logoSrc = resolveLogoBallImage(course.logoBallImg)
+            return (
+              <CardLink
+                key={course.id}
+                to={`/courses/${course.id}`}
+                title={courseTitle(course)}
+                meta={coursePlace(course)}
+                leading={logoSrc ? <LogoBall src={logoSrc} /> : undefined}
+              />
+            )
+          })}
         </div>
       )}
 
