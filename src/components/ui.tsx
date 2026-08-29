@@ -21,31 +21,61 @@ export function PageHeader({ title, eyebrow, children }: PageHeaderProps) {
   )
 }
 
-export function CardLink({
-  to,
-  title,
-  meta,
-  leading,
-  children,
-}: {
-  to: string
+const cardShell =
+  'flex items-center gap-4 rounded-xl border border-fairway/10 bg-white/50 p-4 shadow-sm'
+
+type CardContentProps = {
   title: string
   meta?: string
   leading?: ReactNode
   children?: ReactNode
-}) {
+}
+
+function CardContent({ title, meta, leading, children }: CardContentProps) {
   return (
-    <Link
-      to={to}
-      className="flex items-center gap-4 rounded-xl border border-fairway/10 bg-white/50 p-4 shadow-sm transition hover:border-gold/40 hover:shadow"
-    >
+    <>
       {leading}
       <div className="min-w-0">
         <h2 className="font-display text-xl text-fairway">{title}</h2>
         {meta && <p className="mt-1 text-sm text-ink/60">{meta}</p>}
         {children && <div className="mt-2 text-sm text-ink/80">{children}</div>}
       </div>
+    </>
+  )
+}
+
+export function CardLink({
+  to,
+  title,
+  meta,
+  leading,
+  children,
+}: CardContentProps & { to: string }) {
+  return (
+    <Link
+      to={to}
+      className={`${cardShell} transition hover:border-gold/40 hover:shadow`}
+    >
+      <CardContent title={title} meta={meta} leading={leading}>
+        {children}
+      </CardContent>
     </Link>
+  )
+}
+
+/** Same layout as CardLink, without navigation or hover affordance. */
+export function CardStatic({
+  title,
+  meta,
+  leading,
+  children,
+}: CardContentProps) {
+  return (
+    <div className={cardShell}>
+      <CardContent title={title} meta={meta} leading={leading}>
+        {children}
+      </CardContent>
+    </div>
   )
 }
 

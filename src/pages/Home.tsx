@@ -5,6 +5,7 @@ import { formatLoft, snapshotClubs, useGolfBag } from '../lib/bag'
 import {
   coursePlace,
   courseTitle,
+  publishedCourses,
   resolveLogoBallImage,
   useCuratedCourses,
 } from '../lib/courses'
@@ -18,7 +19,9 @@ export default function Home() {
   const bagState = useGolfBag()
   const coursesState = useCuratedCourses()
   const featured =
-    coursesState.status === 'ready' ? coursesState.courses.slice(0, 3) : []
+    coursesState.status === 'ready'
+      ? publishedCourses(coursesState.courses).slice(0, 3)
+      : []
   const latestNotes = loadNotes().slice(0, 3)
   const snapshot =
     bagState.status === 'ready' ? snapshotClubs(bagState.bag, 4) : []

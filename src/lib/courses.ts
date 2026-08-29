@@ -12,9 +12,9 @@ export type PublishedMyCourse = MyCourse & { id: string }
 export type CoursesLoadState =
   | { status: 'loading' }
   | { status: 'error'; message: string }
-  | { status: 'ready'; courses: PublishedMyCourse[] }
+  | { status: 'ready'; courses: MyCourse[] }
 
-let inflight: Promise<PublishedMyCourse[]> | null = null
+let inflight: Promise<MyCourse[]> | null = null
 
 export function isPublishedCourseId(id: unknown): id is string {
   return typeof id === 'string' && id.trim() !== ''
@@ -76,14 +76,13 @@ export function courseImageUrls(course: MyCourse): string[] {
   return urls
 }
 
-export async function fetchCuratedCourses(): Promise<PublishedMyCourse[]> {
+export async function fetchCuratedCourses(): Promise<MyCourse[]> {
   if (!inflight) {
     inflight = fetch(GOLF_COURSES_URL)
       .then(async (res) => {
         if (!res.ok) throw new Error(`Could not load courses (${res.status})`)
         const data: unknown = await res.json()
-        const list = Array.isArray(data) ? (data as MyCourse[]) : []
-        return publishedCourses(list)
+        return Array.isArray(data) ? (data as MyCourse[]) : []
       })
       .catch((err) => {
         inflight = null

@@ -1,9 +1,16 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CardLink, LogoBall, PageHeader, SectionLabel } from '../components/ui'
+import {
+  CardLink,
+  CardStatic,
+  LogoBall,
+  PageHeader,
+  SectionLabel,
+} from '../components/ui'
 import {
   coursePlace,
   courseTitle,
+  isPublishedCourseId,
   resolveLogoBallImage,
   useCuratedCourses,
 } from '../lib/courses'
@@ -49,7 +56,15 @@ export default function Courses() {
   const myCoursesState = useCuratedCourses()
   const myCourses =
     myCoursesState.status === 'ready' ? myCoursesState.courses : []
-  const myIds = useMemo(() => new Set(myCourses.map((c) => c.id)), [myCourses])
+  const myIds = useMemo(
+    () =>
+      new Set(
+        myCourses
+          .map((c) => c.id)
+          .filter(isPublishedCourseId),
+      ),
+    [myCourses],
+  )
 
   return (
     <section className="mx-auto max-w-5xl px-4 py-10">
@@ -69,15 +84,28 @@ export default function Courses() {
       )}
       {myCoursesState.status === 'ready' && (
         <div className="mb-10 grid gap-4 sm:grid-cols-2">
-          {myCourses.map((course) => {
+          {myCourses.map((course, index) => {
             const logoSrc = resolveLogoBallImage(course.logoBallImg)
+            const title = courseTitle(course)
+            const meta = coursePlace(course)
+            const leading = logoSrc ? <LogoBall src={logoSrc} /> : undefined
+            if (!isPublishedCourseId(course.id)) {
+              return (
+                <CardStatic
+                  key={`unlinked-${index}`}
+                  title={title}
+                  meta={meta}
+                  leading={leading}
+                />
+              )
+            }
             return (
               <CardLink
                 key={course.id}
                 to={`/courses/${course.id}`}
-                title={courseTitle(course)}
-                meta={coursePlace(course)}
-                leading={logoSrc ? <LogoBall src={logoSrc} /> : undefined}
+                title={title}
+                meta={meta}
+                leading={leading}
               />
             )
           })}
