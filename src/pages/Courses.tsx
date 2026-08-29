@@ -10,7 +10,8 @@ import {
 import {
   coursePlace,
   courseTitle,
-  isPublishedCourseId,
+  isOpenGolfCourseId,
+  publishedCourses,
   resolveLogoBallImage,
   useCuratedCourses,
 } from '../lib/courses'
@@ -55,13 +56,13 @@ export default function Courses() {
 
   const myCoursesState = useCuratedCourses()
   const myCourses =
-    myCoursesState.status === 'ready' ? myCoursesState.courses : []
+    myCoursesState.status === 'ready'
+      ? publishedCourses(myCoursesState.courses)
+      : []
   const myIds = useMemo(
     () =>
       new Set(
-        myCourses
-          .map((c) => c.id)
-          .filter(isPublishedCourseId),
+        myCourses.map((c) => c.id).filter(isOpenGolfCourseId),
       ),
     [myCourses],
   )
@@ -89,7 +90,7 @@ export default function Courses() {
             const title = courseTitle(course)
             const meta = coursePlace(course)
             const leading = logoSrc ? <LogoBall src={logoSrc} /> : undefined
-            if (!isPublishedCourseId(course.id)) {
+            if (!isOpenGolfCourseId(course.id)) {
               return (
                 <CardStatic
                   key={`unlinked-${index}`}

@@ -3,7 +3,11 @@ import { Link, useParams } from 'react-router-dom'
 import CopyIdButton from '../components/CopyIdButton'
 import ScorecardTable from '../components/ScorecardTable'
 import { PageHeader } from '../components/ui'
-import { courseImageUrls, useCuratedCourses } from '../lib/courses'
+import {
+  courseImageUrls,
+  isOpenGolfCourseId,
+  useCuratedCourses,
+} from '../lib/courses'
 import { courseDisplayName, getCourse } from '../lib/opengolf'
 import type { CourseDetail } from '../types'
 
@@ -11,10 +15,13 @@ const CourseMap = lazy(() => import('../components/CourseMap'))
 
 export default function CourseDetailPage() {
   const { id } = useParams()
-  if (!id) {
+  if (!isOpenGolfCourseId(id)) {
     return (
       <section className="mx-auto max-w-5xl px-4 py-10">
-        <p>Missing course id.</p>
+        <p>This course is not linked to OpenGolfAPI yet.</p>
+        <Link to="/courses" className="mt-4 inline-block text-fairway underline">
+          Back to courses
+        </Link>
       </section>
     )
   }
@@ -39,6 +46,7 @@ function CourseDetailBody({ id }: { id: string }) {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
+    if (!isOpenGolfCourseId(id)) return
     let cancelled = false
     getCourse(id)
       .then((data) => {

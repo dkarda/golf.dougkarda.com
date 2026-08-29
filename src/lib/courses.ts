@@ -7,7 +7,7 @@ export const GOLF_COURSES_URL =
 /** Same directory as bag photos. Some scorecard/map filenames 404. */
 export const COURSE_IMAGE_BASE = 'https://assets.dougkarda.com/images/golf/'
 
-export type PublishedMyCourse = MyCourse & { id: string }
+export type PublishedMyCourse = MyCourse & { course: string }
 
 export type CoursesLoadState =
   | { status: 'loading' }
@@ -16,14 +16,19 @@ export type CoursesLoadState =
 
 let inflight: Promise<MyCourse[]> | null = null
 
-export function isPublishedCourseId(id: unknown): id is string {
+/** OpenGolfAPI id — optional on curated rows until it is filled in. */
+export function isOpenGolfCourseId(id: unknown): id is string {
   return typeof id === 'string' && id.trim() !== ''
+}
+
+export function isPublishedCourseName(name: unknown): name is string {
+  return typeof name === 'string' && name.trim() !== ''
 }
 
 export function isPublishedCourse(
   course: MyCourse,
 ): course is PublishedMyCourse {
-  return isPublishedCourseId(course.id)
+  return isPublishedCourseName(course.course)
 }
 
 export function publishedCourses(list: MyCourse[]): PublishedMyCourse[] {
@@ -31,7 +36,7 @@ export function publishedCourses(list: MyCourse[]): PublishedMyCourse[] {
 }
 
 export function courseTitle(course: MyCourse): string {
-  return course.course
+  return isPublishedCourseName(course.course) ? course.course : ''
 }
 
 export function coursePlace(course: MyCourse): string {

@@ -58,7 +58,7 @@ export type GolfBag = {
 
 export type MyCourse = {
   id?: string | null
-  course: string
+  course?: string | null
   holes?: string | number
   played?: string
   address?: string

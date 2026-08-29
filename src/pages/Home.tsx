@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
-import { CardLink, LogoBall, SectionLabel } from '../components/ui'
+import { CardLink, CardStatic, LogoBall, SectionLabel } from '../components/ui'
 import links from '../data/links.json'
 import { formatLoft, snapshotClubs, useGolfBag } from '../lib/bag'
 import {
   coursePlace,
   courseTitle,
+  isOpenGolfCourseId,
   publishedCourses,
   resolveLogoBallImage,
   useCuratedCourses,
@@ -58,15 +59,28 @@ export default function Home() {
         )}
         {coursesState.status === 'ready' && (
           <div className="grid gap-4 sm:grid-cols-3">
-            {featured.map((course) => {
+            {featured.map((course, index) => {
               const logoSrc = resolveLogoBallImage(course.logoBallImg)
+              const title = courseTitle(course)
+              const meta = coursePlace(course)
+              const leading = logoSrc ? <LogoBall src={logoSrc} /> : undefined
+              if (!isOpenGolfCourseId(course.id)) {
+                return (
+                  <CardStatic
+                    key={`unlinked-${index}`}
+                    title={title}
+                    meta={meta}
+                    leading={leading}
+                  />
+                )
+              }
               return (
                 <CardLink
                   key={course.id}
                   to={`/courses/${course.id}`}
-                  title={courseTitle(course)}
-                  meta={coursePlace(course)}
-                  leading={logoSrc ? <LogoBall src={logoSrc} /> : undefined}
+                  title={title}
+                  meta={meta}
+                  leading={leading}
                 />
               )
             })}
