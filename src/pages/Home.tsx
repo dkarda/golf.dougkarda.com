@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { CardLink, CardStatic, LogoBall, SectionLabel } from '../components/ui'
-import links from '../data/links.json'
 import { formatLoft, snapshotClubs, useGolfBag } from '../lib/bag'
 import {
   coursePlace,
@@ -11,14 +10,13 @@ import {
   useCuratedCourses,
 } from '../lib/courses'
 import { BAG_CATEGORY_LABEL } from '../lib/labels'
+import { snapshotRecommended, useGolfLinks } from '../lib/links'
 import { loadNotes } from '../lib/notes'
-import type { GolfLink } from '../types'
-
-const allLinks = links as GolfLink[]
 
 export default function Home() {
   const bagState = useGolfBag()
   const coursesState = useCuratedCourses()
+  const linksState = useGolfLinks()
   const featured =
     coursesState.status === 'ready'
       ? publishedCourses(coursesState.courses).slice(0, 3)
@@ -26,7 +24,10 @@ export default function Home() {
   const latestNotes = loadNotes().slice(0, 3)
   const snapshot =
     bagState.status === 'ready' ? snapshotClubs(bagState.bag, 4) : []
-  const recs = allLinks.filter((l) => l.recommended).slice(0, 3)
+  const recs =
+    linksState.status === 'ready'
+      ? snapshotRecommended(linksState.links, 3)
+      : []
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-10">
@@ -151,21 +152,31 @@ export default function Home() {
             All links
           </Link>
         </div>
-        <ul className="grid gap-3 sm:grid-cols-3">
-          {recs.map((link) => (
-            <li key={link.url}>
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noreferrer"
-                className="block rounded-xl border border-fairway/10 bg-white/50 p-4 hover:border-gold/40"
-              >
-                <p className="font-display text-lg text-fairway">{link.title}</p>
-                <p className="mt-1 text-sm text-ink/70">{link.description}</p>
-              </a>
-            </li>
-          ))}
-        </ul>
+        {linksState.status === 'loading' && (
+          <p className="text-sm text-ink/70">Loading links…</p>
+        )}
+        {linksState.status === 'error' && (
+          <p className="text-sm text-ink/70">{linksState.message}</p>
+        )}
+        {linksState.status === 'ready' && (
+          <ul className="grid gap-3 sm:grid-cols-3">
+            {recs.map((link) => (
+              <li key={link.url}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded-xl border border-fairway/10 bg-white/50 p-4 hover:border-gold/40"
+                >
+                  <p className="font-display text-lg text-fairway">
+                    {link.title}
+                  </p>
+                  <p className="mt-1 text-sm text-ink/70">{link.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
     </div>
   )

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import type { MyCourse } from '../types'
 
 export const GOLF_COURSES_URL =
-  'https://assets.dougkarda.com/data/golfCourses.json'
+  'https://assets.dougkarda.com/data/golf/golfCourses.json'
 
 /** Same directory as bag photos. Some scorecard/map filenames 404. */
 export const COURSE_IMAGE_BASE = 'https://assets.dougkarda.com/images/golf/'

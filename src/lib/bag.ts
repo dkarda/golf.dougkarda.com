@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { BAG_CATEGORY_ORDER } from './labels'
 import type { BagAccessory, Club, ClubCategory, GolfBag } from '../types'
 
-export const GOLF_BAG_URL = 'https://assets.dougkarda.com/data/golfBag.json'
+export const GOLF_BAG_URL = 'https://assets.dougkarda.com/data/golf/golfBag.json'
 
 /** Confirmed directory on the CDN (listing is 403). Filenames in JSON 404 today. */
 export const BAG_IMAGE_BASE = 'https://assets.dougkarda.com/images/golf/'
