@@ -186,10 +186,6 @@ function CourseDetailBody({ id }: { id: string }) {
         holes={course.holes_data ?? []}
       />
 
-      <div className="mt-10 border-t border-fairway/10 pt-6">
-        <h2 className="font-display mb-2 text-xl text-fairway">Add to My Courses</h2>
-        <CopyIdButton id={course.id} />
-      </div>
     </section>
   )
 }
