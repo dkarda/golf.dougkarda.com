@@ -1,6 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import CopyIdButton from '../components/CopyIdButton'
 import ScorecardTable from '../components/ScorecardTable'
 import { PageHeader } from '../components/ui'
 import {
