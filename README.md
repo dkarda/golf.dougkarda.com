@@ -1,9 +1,14 @@
 # Get Golf Course ID from DB
 - https://api.opengolfapi.org/v1/courses/search?q=YOUR+COURSE+NAME
 
+# Bag
+- Clubs and accessories currently in the bag, loaded from the published bag file.
+
+# Notes
+- One markdown file per entry in <code>src/data/notes/</code>. Filter by tag; newest first.
+
 # Links
 - Recommended channels and sites from src/data/links.json. Swap them whenever the list changes.
-
 
 
 # React + TypeScript + Vite

@@ -22,8 +22,7 @@ export default function Notes() {
     <section className="mx-auto max-w-5xl px-4 py-10">
       <PageHeader title="Notes" eyebrow="Lessons & study">
         <p>
-          One markdown file per entry in <code>src/data/notes/</code>. Filter by
-          tag; newest first.
+          My personal swing thoughts, lessons, and study notes.
         </p>
       </PageHeader>
 

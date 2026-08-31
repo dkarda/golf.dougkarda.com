@@ -179,8 +179,7 @@ export default function Bag() {
     <section className="mx-auto max-w-5xl px-4 py-10">
       <PageHeader title="The bag" eyebrow="Live list">
         <p>
-          Clubs and accessories currently in the bag, loaded from the published
-          bag file.
+          What I currently carry on the course.
         </p>
       </PageHeader>
 
