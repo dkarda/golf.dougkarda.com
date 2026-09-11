@@ -1,4 +1,4 @@
-import type { BagSectionCategory, ClubCategory } from '../types'
+import type { BagSectionCategory, ClubCategory, NoteSource } from '../types'
 
 export const BAG_CATEGORY_ORDER: ClubCategory[] = [
   'driver',
@@ -21,8 +21,14 @@ export const BAG_CATEGORY_LABEL: Record<BagSectionCategory, string> = {
   accessory: 'Accessories',
 }
 
-export const NOTE_SOURCE_LABEL = {
+export const NOTE_SOURCE_ORDER: NoteSource[] = [
+  'lesson',
+  'on-course',
+  'self-study',
+]
+
+export const NOTE_SOURCE_LABEL: Record<NoteSource, string> = {
   lesson: 'Lesson',
   'self-study': 'Self-study',
   'on-course': 'On-course',
-} as const
+}

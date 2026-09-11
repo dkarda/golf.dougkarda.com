@@ -11,7 +11,7 @@ import {
 } from '../lib/courses'
 import { BAG_CATEGORY_LABEL } from '../lib/labels'
 import { snapshotRecommended, useGolfLinks } from '../lib/links'
-import { loadNotes } from '../lib/notes'
+import { loadNotes, noteMetaLine } from '../lib/notes'
 
 export default function Home() {
   const bagState = useGolfBag()
@@ -102,7 +102,7 @@ export default function Home() {
               key={note.slug}
               to={`/notes/${note.slug}`}
               title={note.title}
-              meta={note.date}
+              meta={noteMetaLine(note)}
             />
           ))}
         </div>

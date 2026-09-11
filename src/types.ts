@@ -88,9 +88,9 @@ export type NoteSource = 'lesson' | 'self-study' | 'on-course'
 export type NoteMeta = {
   slug: string
   title: string
-  date: string
+  date?: string
   tags: string[]
-  source: NoteSource
+  source?: NoteSource
   body: string
 }
 

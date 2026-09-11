@@ -1,14 +1,13 @@
 ---
 title: Wedge distance control
-date: 2026-08-18
+#date: 2026-08-18
 tags: [practice, wedges]
 source: self-study
 ---
 
-Mapped carry numbers for 50 / 54 / 58 with three lengths: hip, chest, full.
+The wedge is not a club for distance. It's all about precision and control.
 
-1. Pick one landing zone, not a flag
-2. Same tempo — length of swing is the only variable
-3. Write actual carry, not “what it should be”
+- Pick a safe, specific landing zone, not the flag.
+- Slow, smooth tempo — length of swing is the only variable.
+- Never swing at 100%.
 
-The 54 at chest height is the stock 90-yard shot until the numbers say otherwise.
