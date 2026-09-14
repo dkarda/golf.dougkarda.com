@@ -28,8 +28,7 @@ export default function CopyIdButton({ id }: CopyIdButtonProps) {
         {copied ? 'Copied' : 'Copy id'}
       </button>
       <span className="text-ink/60">
-        Add this id to golfCourses.json on the assets CDN to include it in My
-        Courses.
+        Add this id to src/data/golfCourses.json to include it in My Courses.
       </span>
     </div>
   )

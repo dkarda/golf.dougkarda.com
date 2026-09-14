@@ -7,7 +7,7 @@ import {
   isOpenGolfCourseId,
   publishedCourses,
   resolveLogoBallImage,
-  useCuratedCourses,
+  loadGolfCourses,
 } from '../lib/courses'
 import { BAG_CATEGORY_LABEL } from '../lib/labels'
 import { loadGolfLinks, snapshotRecommended } from '../lib/links'
@@ -15,11 +15,7 @@ import { loadNotes, noteMetaLine } from '../lib/notes'
 
 export default function Home() {
   const bagState = useGolfBag()
-  const coursesState = useCuratedCourses()
-  const featured =
-    coursesState.status === 'ready'
-      ? publishedCourses(coursesState.courses).slice(0, 3)
-      : []
+  const featured = publishedCourses(loadGolfCourses()).slice(0, 3)
   const latestNotes = loadNotes().slice(0, 3)
   const snapshot =
     bagState.status === 'ready' ? snapshotClubs(bagState.bag, 4) : []
@@ -48,41 +44,33 @@ export default function Home() {
             All courses
           </Link>
         </div>
-        {coursesState.status === 'loading' && (
-          <p className="text-sm text-ink/70">Loading courses…</p>
-        )}
-        {coursesState.status === 'error' && (
-          <p className="text-sm text-ink/70">{coursesState.message}</p>
-        )}
-        {coursesState.status === 'ready' && (
-          <div className="grid gap-4 sm:grid-cols-3">
-            {featured.map((course, index) => {
-              const logoSrc = resolveLogoBallImage(course.logoBallImg)
-              const title = courseTitle(course)
-              const meta = coursePlace(course)
-              const leading = logoSrc ? <LogoBall src={logoSrc} /> : undefined
-              if (!isOpenGolfCourseId(course.id)) {
-                return (
-                  <CardStatic
-                    key={`unlinked-${index}`}
-                    title={title}
-                    meta={meta}
-                    leading={leading}
-                  />
-                )
-              }
+        <div className="grid gap-4 sm:grid-cols-3">
+          {featured.map((course, index) => {
+            const logoSrc = resolveLogoBallImage(course.logoBallImg)
+            const title = courseTitle(course)
+            const meta = coursePlace(course)
+            const leading = logoSrc ? <LogoBall src={logoSrc} /> : undefined
+            if (!isOpenGolfCourseId(course.id)) {
               return (
-                <CardLink
-                  key={course.id}
-                  to={`/courses/${course.id}`}
+                <CardStatic
+                  key={`unlinked-${index}`}
                   title={title}
                   meta={meta}
                   leading={leading}
                 />
               )
-            })}
-          </div>
-        )}
+            }
+            return (
+              <CardLink
+                key={course.id}
+                to={`/courses/${course.id}`}
+                title={title}
+                meta={meta}
+                leading={leading}
+              />
+            )
+          })}
+        </div>
       </section>
 
       <section className="mb-12">

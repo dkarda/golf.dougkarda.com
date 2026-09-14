@@ -13,7 +13,7 @@ import {
   isOpenGolfCourseId,
   publishedCourses,
   resolveLogoBallImage,
-  useCuratedCourses,
+  loadGolfCourses,
 } from '../lib/courses'
 import { courseDisplayName, searchCourses } from '../lib/opengolf'
 import type { CourseSearchHit } from '../types'
@@ -54,11 +54,7 @@ export default function Courses() {
   const results =
     searching && fetched?.q === debounced && !fetched.error ? fetched.hits : []
 
-  const myCoursesState = useCuratedCourses()
-  const myCourses =
-    myCoursesState.status === 'ready'
-      ? publishedCourses(myCoursesState.courses)
-      : []
+  const myCourses = publishedCourses(loadGolfCourses())
   const myIds = useMemo(
     () =>
       new Set(
@@ -76,42 +72,34 @@ export default function Courses() {
         </p>
       </PageHeader>
 
-      <SectionLabel>My Courses</SectionLabel>
-      {myCoursesState.status === 'loading' && (
-        <p className="mb-10 text-sm text-ink/70">Loading courses…</p>
-      )}
-      {myCoursesState.status === 'error' && (
-        <p className="mb-10 text-sm text-ink/70">{myCoursesState.message}</p>
-      )}
-      {myCoursesState.status === 'ready' && (
-        <div className="mb-10 grid gap-4 sm:grid-cols-2">
-          {myCourses.map((course, index) => {
-            const logoSrc = resolveLogoBallImage(course.logoBallImg)
-            const title = courseTitle(course)
-            const meta = coursePlace(course)
-            const leading = logoSrc ? <LogoBall src={logoSrc} /> : undefined
-            if (!isOpenGolfCourseId(course.id)) {
-              return (
-                <CardStatic
-                  key={`unlinked-${index}`}
-                  title={title}
-                  meta={meta}
-                  leading={leading}
-                />
-              )
-            }
+    <SectionLabel>My Courses</SectionLabel>
+      <div className="mb-10 grid gap-4 sm:grid-cols-2">
+        {myCourses.map((course, index) => {
+          const logoSrc = resolveLogoBallImage(course.logoBallImg)
+          const title = courseTitle(course)
+          const meta = coursePlace(course)
+          const leading = logoSrc ? <LogoBall src={logoSrc} /> : undefined
+          if (!isOpenGolfCourseId(course.id)) {
             return (
-              <CardLink
-                key={course.id}
-                to={`/courses/${course.id}`}
+              <CardStatic
+                key={`unlinked-${index}`}
                 title={title}
                 meta={meta}
                 leading={leading}
               />
             )
-          })}
-        </div>
-      )}
+          }
+          return (
+            <CardLink
+              key={course.id}
+              to={`/courses/${course.id}`}
+              title={title}
+              meta={meta}
+              leading={leading}
+            />
+          )
+        })}
+      </div>
 
       <SectionLabel>Search any US course</SectionLabel>
       <label className="mb-4 block">

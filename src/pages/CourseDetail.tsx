@@ -5,7 +5,8 @@ import { PageHeader } from '../components/ui'
 import {
   courseImageUrls,
   isOpenGolfCourseId,
-  useCuratedCourses,
+  loadGolfCourses,
+  publishedCourses,
 } from '../lib/courses'
 import { courseDisplayName, getCourse } from '../lib/opengolf'
 import type { CourseDetail } from '../types'
@@ -59,11 +60,9 @@ function CourseDetailBody({ id }: { id: string }) {
     }
   }, [id])
 
-  const myCoursesState = useCuratedCourses()
+  const myCourses = publishedCourses(loadGolfCourses())
   const mine =
-    myCoursesState.status === 'ready'
-      ? myCoursesState.courses.find((c) => c.id === id)
-      : undefined
+    myCourses.find((course) => course.id === id)
   const photos = mine ? courseImageUrls(mine) : []
 
   if (error) {

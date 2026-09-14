@@ -1,20 +1,14 @@
-import { useEffect, useState } from 'react'
 import type { MyCourse } from '../types'
+import golfCourses from '../data/golfCourses.json'
 
-export const GOLF_COURSES_URL =
-  'https://assets.dougkarda.com/data/golf/golfCourses.json'
+export function loadGolfCourses(): MyCourse[] {
+  return Array.isArray(golfCourses) ? (golfCourses as MyCourse[]) : []
+}
 
 /** Same directory as bag photos. Some scorecard/map filenames 404. */
 export const COURSE_IMAGE_BASE = '/images/'
 
 export type PublishedMyCourse = MyCourse & { course: string }
-
-export type CoursesLoadState =
-  | { status: 'loading' }
-  | { status: 'error'; message: string }
-  | { status: 'ready'; courses: MyCourse[] }
-
-let inflight: Promise<MyCourse[]> | null = null
 
 /** OpenGolfAPI id — optional on curated rows until it is filled in. */
 export function isOpenGolfCourseId(id: unknown): id is string {
@@ -81,44 +75,3 @@ export function courseImageUrls(course: MyCourse): string[] {
   return urls
 }
 
-export async function fetchCuratedCourses(): Promise<MyCourse[]> {
-  if (!inflight) {
-    inflight = fetch(GOLF_COURSES_URL)
-      .then(async (res) => {
-        if (!res.ok) throw new Error(`Could not load courses (${res.status})`)
-        const data: unknown = await res.json()
-        return Array.isArray(data) ? (data as MyCourse[]) : []
-      })
-      .catch((err) => {
-        inflight = null
-        throw err
-      })
-  }
-  return inflight
-}
-
-export function useCuratedCourses(): CoursesLoadState {
-  const [state, setState] = useState<CoursesLoadState>({ status: 'loading' })
-
-  useEffect(() => {
-    let cancelled = false
-    fetchCuratedCourses()
-      .then((courses) => {
-        if (!cancelled) setState({ status: 'ready', courses })
-      })
-      .catch((err: unknown) => {
-        if (!cancelled) {
-          setState({
-            status: 'error',
-            message:
-              err instanceof Error ? err.message : 'Could not load courses',
-          })
-        }
-      })
-    return () => {
-      cancelled = true
-    }
-  }, [])
-
-  return state
-}
