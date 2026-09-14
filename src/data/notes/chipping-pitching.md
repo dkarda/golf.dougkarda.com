@@ -2,7 +2,7 @@
 title: Chipping & Pitching around the green
 #date: 2026-08-18
 tags: [practice, wedges, short irons, chipping, pitching]
-source: chernak-study
+source: ob-pro-lesson
 ---
 
 Simplify the wedge swing, minimalize the motion, improve the consistency.

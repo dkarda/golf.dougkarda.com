@@ -83,7 +83,13 @@ export type GolfLink = {
   recommended?: boolean
 }
 
-export type NoteSource = 'lesson' | 'self-study' | 'on-course'
+export type GolfGlossary = {
+  term: string
+  definition: string
+  relatedTerms?: string[]
+}
+
+export type NoteSource = 'lesson' | 'self-study' | 'on-course' | 'ob-pro-lesson'
 
 export type NoteMeta = {
   slug: string

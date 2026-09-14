@@ -5,6 +5,7 @@ const nav = [
   { to: '/courses', label: 'Courses', end: false },
   { to: '/bag', label: 'Bag', end: false },
   { to: '/notes', label: 'Notes', end: false },
+  { to: '/glossary', label: 'Glossary', end: false },
   { to: '/links', label: 'Links', end: false },
 ] as const
 

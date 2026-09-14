@@ -1,0 +1,317 @@
+﻿{
+  "clubs": [
+    {
+      "category": "driver",
+      "brand": "Callaway",
+      "model": "Epic Flash",
+      "year": 2019,
+      "loft": 9,
+      "flex": "Stiff",
+      "shaft": "Project X Hzrdus Smoke Black 60",
+      "shaftLength": "-0.25",
+      "grip": {
+        "original": "MCC Align 51G MNS",
+        "current": "MCC Swing Grip, Black/Black",
+        "installed": "2024-05"
+      },
+      "adjustments": {
+        "slidingWeightPosition": "DRAW 3.0"
+      },
+      "purchase": {
+        "location": "Pete's Golf",
+        "date": "2019-10"
+      },
+      "image": "epic-flash-driver-2019.png",
+	  "active": false
+    },
+    {
+      "category": "driver",
+      "brand": "Ping",
+      "model": "G430 Max",
+      "year": 2024,
+      "loft": 9,
+      "flex": "Stiff",
+      "shaft": "Alta CB 65",
+      "shaftLength": null,
+      "grip": {
+        "original": "stock"
+      },
+      "purchase": {
+        "location": "Mike C",
+        "date": "2024-09"
+      },
+      "image": null,
+	  "active": true
+    },
+
+    {
+      "category": "wood",
+      "brand": "Callaway",
+      "model": "Epic Flash 3",
+      "year": 2019,
+      "loft": 15,
+      "flex": "Stiff",
+      "shaft": "Project X Hzrdus Smoke Black 70",
+      "shaftLength": "standard",
+      "grip": {
+        "original": "MCC Align 51G MNS",
+        "current": "MCC Swing Grip, Black/Black",
+        "installed": "2024-05"
+      },
+      "adjustments": {
+        "cogLower": "S",
+        "cogUpper": "D"
+      },
+      "purchase": {
+        "location": "Pete's Golf",
+        "date": "2019-10"
+      },
+      "image": "epic-flash-3wood-2019.png",
+	  "active": false
+    },
+    {
+      "category": "wood",
+      "brand": "Ping",
+      "model": "G430 Max 5",
+      "year": 2024,
+      "loft": 18,
+      "flex": "Stiff",
+      "shaft": "Alta CB 65",
+      "shaftLength": "standard",
+      "grip": {
+        "original": "stock"
+      },
+      "purchase": {
+        "location": "Mike C",
+        "date": "2024-09"
+      },
+      "image": null,
+	  "active": true
+    },
+    {
+      "category": "wood",
+      "brand": "Ping",
+      "model": "G430 Max 7",
+      "year": 2024,
+      "loft": 21,
+      "flex": "Stiff",
+      "shaft": "Alta CB 65",
+      "shaftLength": "standard",
+      "grip": {
+        "original": "stock"
+      },
+      "purchase": {
+        "location": "Mike C",
+        "date": "2024-09"
+      },
+      "image": null,
+	  "active": true
+    },
+    {
+      "category": "wood",
+      "brand": "Ping",
+      "model": "G430 Max 9",
+      "year": 2024,
+      "loft": 24,
+      "flex": "Stiff",
+      "shaft": "Alta CB 65",
+      "shaftLength": "standard",
+      "grip": {
+        "original": "stock"
+      },
+      "purchase": {
+        "location": "Mike C",
+        "date": "2024-10"
+      },
+      "image": null,
+	  "active": true
+    },
+
+    {
+      "category": "hybrid",
+      "brand": "TaylorMade",
+      "model": "SIM Max",
+      "number": 3,
+      "year": 2020,
+      "loft": 19,
+      "flex": "Graphite Regular",
+      "shaft": "Fujikura Ventus Blue 6R",
+      "shaftLength": "standard",
+      "grip": {
+        "original": "stock",
+        "current": "MCC Swing Grip, Black/Black",
+        "installed": "2024-05"
+      },
+      "purchase": {
+        "location": null,
+        "date": null
+      },
+      "image": null,
+	  "active": false
+    },
+    {
+      "category": "hybrid",
+      "brand": "TaylorMade",
+      "model": "SIM Max",
+      "number": 4,
+      "year": 2020,
+      "loft": 22,
+      "flex": "Graphite Regular",
+      "shaft": "Fujikura Ventus Blue 6R",
+      "shaftLength": "standard",
+      "grip": {
+        "original": "stock",
+        "current": "MCC Swing Grip, Black/Black",
+        "installed": "2024-05"
+      },
+      "purchase": {
+        "location": null,
+        "date": null
+      },
+      "image": null,
+	  "active": false
+    },
+    {
+      "category": "hybrid",
+      "brand": "Callaway",
+      "model": "Razr X",
+      "year": 2012,
+      "loft": 24,
+      "flex": "Graphite Regular",
+      "shaft": "stock",
+      "shaftLength": "standard",
+      "grip": {
+        "original": "stock"
+      },
+      "purchase": {
+        "location": null,
+        "date": null
+      },
+      "image": null,
+	  "active": false
+    },
+
+    {
+      "category": "iron",
+      "brand": "Callaway",
+      "model": "Razr X HL",
+      "year": 2012,
+      "set": "5-SW",
+      "lofts": {
+        "6": 28,
+        "7": 32,
+        "8": 36,
+        "9": 40,
+        "PW": 44,
+        "AW": 49,
+        "SW": 54
+      },
+      "flex": "Standard",
+      "shaft": "M10 XP Steel Uniflex",
+      "shaftLength": "standard",
+      "grip": {
+        "original": "stock",
+        "current": "MCC Swing Grip, Black/Black",
+        "installed": "2024-05"
+      },
+      "purchase": {
+        "location": "CallawayVIP.com",
+        "date": "2012-02"
+      },
+      "image": "razr-x-hl-aw.png",
+	  "active": true
+    },
+
+    {
+      "category": "wedge",
+      "brand": "Callaway",
+      "model": "Jaws",
+      "loft": 54,
+      "flex": "S200",
+      "shaft": "Dynamic Gold 115",
+      "shaftLength": "standard",
+      "bounce": 12,
+      "grind": "W",
+      "grip": {
+        "original": null,
+        "current": "MCC Swing Grip, Black/Black",
+        "installed": "2024-05"
+      },
+      "purchase": {
+        "location": "Pete's Golf",
+        "date": "2019-12"
+      },
+      "image": null,
+	  "active": true
+    },
+    {
+      "category": "wedge",
+      "brand": "Callaway",
+      "model": "Jaws",
+      "loft": 58,
+      "flex": "S200",
+      "shaft": "Dynamic Gold 115",
+      "shaftLength": "standard",
+      "bounce": 12,
+      "grind": "W",
+      "grip": {
+        "original": null,
+        "current": "MCC Swing Grip, Black/Black",
+        "installed": "2024-05"
+      },
+      "purchase": {
+        "location": "Pete's Golf",
+        "date": "2019-12"
+      },
+      "image": null,
+	  "active": true
+    },
+    {
+      "category": "putter",
+      "brand": "Odyssey",
+      "model": "White Hot Pro",
+      "grip": {
+        "original": null,
+        "previous": "SuperStroke",
+        "current": "SuperStroke",
+        "installed": "2024-05"
+      },
+      "purchase": {
+        "location": null,
+        "date": null
+      },
+      "image": null,
+	  "active": false
+    },
+    {
+      "category": "putter",
+      "brand": "TaylorMade",
+      "model": "Spider Tour S",
+      "grip": {
+        "original": null,
+        "current": "SuperStroke 3",
+        "installed": "2024-05"
+      },
+      "purchase": {
+        "location": "Mike C",
+        "date": "2026-05"
+      },
+      "image": null,
+	  "active": true
+    }
+  ],
+
+  "accessories": [
+    {
+      "category": "bag",
+      "brand": "Sun Mountain",
+      "model": "3.5 LS",
+      "purchase": {
+        "location": null,
+        "date": null
+      },
+      "image": null,
+	  "active": true
+    }
+  ]
+}

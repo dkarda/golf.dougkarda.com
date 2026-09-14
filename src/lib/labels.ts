@@ -25,10 +25,12 @@ export const NOTE_SOURCE_ORDER: NoteSource[] = [
   'lesson',
   'on-course',
   'self-study',
+  'ob-pro-lesson',
 ]
 
 export const NOTE_SOURCE_LABEL: Record<NoteSource, string> = {
   lesson: 'Lesson',
   'self-study': 'Self-study',
   'on-course': 'On-course',
+  'ob-pro-lesson': 'Oyster Bay Pro Lesson',
 }

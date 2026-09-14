@@ -17,7 +17,7 @@ function parseList(value: string): string[] {
 }
 
 function isSource(value: string): value is NoteSource {
-  return value === 'lesson' || value === 'self-study' || value === 'on-course'
+  return value === 'lesson' || value === 'self-study' || value === 'on-course' || value === 'ob-pro-lesson'
 }
 
 function parseFrontmatter(raw: string): { meta: Record<string, string>; body: string } {

@@ -1,7 +1,7 @@
 import globeIcon from '../assets/globe.svg'
 import youtubeIcon from '../assets/youtube.svg'
 import { PageHeader, SectionLabel } from '../components/ui'
-import { useGolfLinks } from '../lib/links'
+import { loadGolfLinks } from '../lib/links'
 import type { GolfLink, LinkKind } from '../types'
 
 const KIND_ORDER: { kind: LinkKind; label: string; icon: string }[] = [
@@ -32,8 +32,7 @@ function SectionIcon({ src }: { src: string }) {
 }
 
 export default function Links() {
-  const state = useGolfLinks()
-  const groups = state.status === 'ready' ? groupByKind(state.links) : []
+  const groups = groupByKind(loadGolfLinks())
 
   return (
     <section className="mx-auto max-w-5xl px-4 py-10">
@@ -41,16 +40,10 @@ export default function Links() {
         <p>Recommended channels and sites.</p>
       </PageHeader>
 
-      {state.status === 'loading' && (
-        <p className="text-ink/70">Loading links…</p>
-      )}
-      {state.status === 'error' && (
-        <p className="text-ink/70">{state.message}</p>
-      )}
-      {state.status === 'ready' && groups.length === 0 && (
+      {groups.length === 0 && (
         <p className="text-ink/70">No links published yet.</p>
       )}
-      {state.status === 'ready' && groups.length > 0 && (
+      {groups.length > 0 && (
         <div className="space-y-10">
           {groups.map(({ kind, label, icon, items }) => (
             <section key={kind}>

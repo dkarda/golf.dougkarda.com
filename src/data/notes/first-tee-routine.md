@@ -1,6 +1,6 @@
 ---
 title: First-tee routine
-# date: 2026-08-12
+#date: 2026-08-12
 tags: [on-course, routine]
 source: on-course
 ---

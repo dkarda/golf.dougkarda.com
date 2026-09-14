@@ -10,6 +10,7 @@ import Home from './pages/Home.tsx'
 import Links from './pages/Links.tsx'
 import NoteDetail from './pages/NoteDetail.tsx'
 import Notes from './pages/Notes.tsx'
+import Glossary from './pages/Glossary.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="bag" element={<Bag />} />
           <Route path="notes" element={<Notes />} />
           <Route path="notes/:slug" element={<NoteDetail />} />
+          <Route path="glossary" element={<Glossary />} />
           <Route path="links" element={<Links />} />
         </Route>
       </Routes>
