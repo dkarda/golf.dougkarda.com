@@ -73,7 +73,11 @@
 		"website": "https://www.bethpagegolfcourse.com/",
 		"teetime": "https://stage.foreupsoftware.com/index.php/booking/19765/#/teetimes",
 		"logoBallImg": "logoball-bethpageblack.jpg",
-		"mainImg": "bethpage-black-main.jpg",
+		"mainImg": [
+			"bethpage-black-main.jpg",
+			"bethpage-black.jpg",
+			"bethpage-black-8.jpg"
+		],
 		"scorecard": "scorecard-bethpageblack.jpg",
 		"courseMap": "coursemap-bethpageblack.jpg"
 	},
@@ -1243,7 +1247,7 @@
 		"website": "https://www.seaviewgolf.com/",
 		"teetime": "https://www.seaviewgolf.com/book_tt/",
 		"logoBallImg": "logoball-seaview.jpg",
-		"mainImg": "",
+		"mainImg": "seaview-the-bay-course-main.jpg",
 		"scorecard": "",
 		"courseMap": ""
 	},
@@ -1258,7 +1262,7 @@
 		"website": "https://www.seaviewgolf.com/",
 		"teetime": "https://www.seaviewgolf.com/book_tt/",
 		"logoBallImg": "logoball-seaview.jpg",
-		"mainImg": "",
+		"mainImg": "seaview-the-pines-course-main.webp",
 		"scorecard": "",
 		"courseMap": ""
 	},

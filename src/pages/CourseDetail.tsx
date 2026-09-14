@@ -106,6 +106,16 @@ function CourseDetailBody({ id }: { id: string }) {
         </p>
       </PageHeader>
 
+      {photos.length > 0 && (
+        <div className="mb-8">
+          <div className="grid gap-3 sm:grid-cols-2">
+            {photos.map((src) => (
+              <CoursePhoto key={src} src={src} />
+            ))}
+          </div>
+        </div>
+      )}
+
       <dl className="mb-8 grid gap-3 text-sm sm:grid-cols-2">
         {course.address && (
           <div>
@@ -162,17 +172,6 @@ function CourseDetailBody({ id }: { id: string }) {
           <p className="text-sm text-ink/70">No coordinates for a map pin.</p>
         )}
       </div>
-
-      {photos.length > 0 && (
-        <div className="mb-8">
-          <h2 className="font-display mb-3 text-2xl text-fairway">Photos</h2>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {photos.map((src) => (
-              <CoursePhoto key={src} src={src} />
-            ))}
-          </div>
-        </div>
-      )}
 
       {course.description && (
         <p className="mb-8 text-ink/80">{course.description}</p>
