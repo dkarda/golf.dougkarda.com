@@ -5,7 +5,7 @@ export const GOLF_COURSES_URL =
   'https://assets.dougkarda.com/data/golf/golfCourses.json'
 
 /** Same directory as bag photos. Some scorecard/map filenames 404. */
-export const COURSE_IMAGE_BASE = 'https://assets.dougkarda.com/images/golf/'
+export const COURSE_IMAGE_BASE = '/images/'
 
 export type PublishedMyCourse = MyCourse & { course: string }
 
@@ -51,7 +51,7 @@ export function resolveCourseImage(
   return `${COURSE_IMAGE_BASE}${image.replace(/^\//, '')}`
 }
 
-/** Curated `logoBallImg` files live under `images/golf/logoballs/`. */
+/** Curated `logoBallImg` files live under `images`. */
 export function resolveLogoBallImage(
   image: string | null | undefined,
 ): string | undefined {
