@@ -36,7 +36,7 @@ function CoursePhoto({ src }: { src: string }) {
       src={src}
       alt=""
       onError={() => setFailed(true)}
-      className="h-56 w-full rounded-lg object-cover"
+      className="h-108 w-full rounded-lg object-cover"
     />
   )
 }
@@ -108,7 +108,7 @@ function CourseDetailBody({ id }: { id: string }) {
 
       {photos.length > 0 && (
         <div className="mb-8">
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3">
             {photos.map((src) => (
               <CoursePhoto key={src} src={src} />
             ))}

@@ -6,7 +6,7 @@
 		"state": "Arizona",
 		"region": "Phoenix Metro",
 		"logoBallImg": "logoball-500club.jpg",
-		"mainImg": "",
+		"mainImg": "500-club-main.jpg",
 		"scorecard": "",
 		"courseMap": ""
 	},
@@ -17,7 +17,7 @@
 		"state": "Arizona",
 		"region": "Phoenix Metro",
 		"logoBallImg": "logoball-aguila.jpg",
-		"mainImg": "",
+		"mainImg": "aguila-main.jpg",
 		"scorecard": "",
 		"courseMap": ""
 	},
@@ -32,7 +32,7 @@
 		"website": "https://www.arrowheadcolorado.com/",
 		"teetime": "https://arrowheadpp.ezlinksgolf.com/index.html?utm_source=google&utm_medium=organic#/search",
 		"logoBallImg": "logoball-arrowhead.jpg",
-		"mainImg": "",
+		"mainImg": "arrowhead-main.jpg",
 		"scorecard": "scorecard-arrowhead.jpg",
 		"courseMap": "coursemap-arrowhead.jpg"
 	},
@@ -43,7 +43,7 @@
 		"state": "New Jersey",
 		"region": "Greater Atlantic City",
 		"logoBallImg": "",
-		"mainImg": "",
+		"mainImg": "ballamore-main.jpg",
 		"scorecard": "",
 		"courseMap": ""
 	},
@@ -58,7 +58,7 @@
 		"website": "https://www.bergenpointgolf.com/",
 		"teetime": "https://www.bergenpointgolf.com/tee-times.html",
 		"logoBallImg": "logoball-bergenpoint.jpg",
-		"mainImg": "",
+		"mainImg": "bergen-point-main.jpg",
 		"scorecard": "scorecard-bergenpoint.png",
 		"courseMap": "coursemap-bergenpoint.png"
 	},
@@ -73,11 +73,7 @@
 		"website": "https://www.bethpagegolfcourse.com/",
 		"teetime": "https://stage.foreupsoftware.com/index.php/booking/19765/#/teetimes",
 		"logoBallImg": "logoball-bethpageblack.jpg",
-		"mainImg": [
-			"bethpage-black-main.jpg",
-			"bethpage-black.jpg",
-			"bethpage-black-8.jpg"
-		],
+		"mainImg": "bethpage-black-main.jpg",
 		"scorecard": "scorecard-bethpageblack.jpg",
 		"courseMap": "coursemap-bethpageblack.jpg"
 	},
@@ -1206,7 +1202,7 @@
 		"website": "https://santapoguecreekgc.com/",
 		"teetime": "https://nysuffolkctyweb.myvscloud.com/webtrac/web/search.html?display=detail",
 		"logoBallImg": "logoball-santapoguecreek.jpg",
-		"mainImg": "",
+		"mainImg": "santapogue-creek-main.jpg",
 		"scorecard": "",
 		"courseMap": ""
 	},
