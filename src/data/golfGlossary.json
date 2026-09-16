@@ -6,7 +6,7 @@
     },
     {
       "term": "Addressing The Ball",
-      "definition": "The act of taking a stance and placing the club-head behind the golf ball. If the ball moves once a player has addressed the ball, there is a one-stroke penalty, unless it is clear that the actions of the player did not cause the ball to move on purpose. If the player addresses the ball and places the head of the club behind it and in doing so causes the ball to move, a one-stroke penalty does not occur in this case.",
+      "definition": "The act of taking a stance and placing the club-head behind the golf ball.",
       "relatedTerms": []
     },
     {
@@ -51,17 +51,17 @@
     },
     {
       "term": "Breakfast Ball",
-      "definition": "An unofficial allowance, like a mulligan, to allow a second shot on the first tee without penalty.",
+      "definition": "An unofficial allowance, like a mulligan, to allow a second shot only on the first tee without penalty.",
       "relatedTerms": []
     },
     {
       "term": "Bump And Run",
-      "definition": "A low-trajectory shot that is intended to get the ball rolling along the fairway and up onto the green. Similar to a chip shot, but played from a greater distance.",
+      "definition": "A low-trajectory shot that is intended to get the ball quickly on the ground and rolling.",
       "relatedTerms": []
     },
     {
       "term": "Bunker",
-      "definition": "A depression in bare ground that is usually covered with sand. Also called a sand trap. It is considered a hazard under the Rules of Golf.",
+      "definition": "A depression in bare ground that is usually covered with sand. Also called a sand trap.",
       "relatedTerms": []
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "term": "Double Eagle",
-      "definition": "A hole played three strokes under par.",
+      "definition": "A hole played three strokes under par. Also known as an albatross.",
       "relatedTerms": []
     },
     {
@@ -121,7 +121,7 @@
     },
     {
       "term": "Drive",
-      "definition": "The first shot of each hole, made from an area called the tee box, usually done with a driver (a type of golf club).",
+      "definition": "The first shot of each hole, made from an area called the tee box, usually done with a driver club type.",
       "relatedTerms": []
     },
     {
@@ -146,7 +146,7 @@
     },
     {
       "term": "Fairway",
-      "definition": "The area of the course between the tee and the green that is well-maintained allowing a good lie for the ball.",
+      "definition": "The area of the course between the tee and the green that is cut low and well-maintained allowing a good lie for the ball.",
       "relatedTerms": []
     },
     {
@@ -161,7 +161,7 @@
     },
     {
       "term": "Flag-Stick",
-      "definition": "A tall marker, often a metal pole with a flag at the top, used to indicate the position of the hole on a green. Also called the pin. An additional smaller flag, or other marker, is sometimes positioned on the flag-stick to indicate the location of the hole (front, middle, or back) on the green. Prior to 2019 putts on the green in professional play were required to have the flagstick out or a player was penalized. Though since 2019 putts on the green in professional play with the flagstick in are optionally allowed.",
+      "definition": "A tall marker, often a metal pole with a flag at the top, used to indicate the position of the hole on a green. Also called the pin. Prior to 2019 putts on the green in professional play were required to have the flagstick out or a player was penalized. Though since 2019 putts on the green in professional play with the flagstick in are optionally allowed.",
       "relatedTerms": []
     },
     {
@@ -191,7 +191,7 @@
     },
     {
       "term": "Foursomes",
-      "definition": "In match play, a contest between two sides each consisting of a pair of players, where the 2 partners hit alternate shots on one ball. The first player tees off, the second player hits the second shot, the first player hits the third shot, and so on until the ball is holed. Also partners alternate their tee shots, so that one member of each team will always tee-off on the odd holes and the other will tee off on the even holes. In stroke-play, a foursome competition is played between several teams each consisting of a pair of players, where partners play alternate shots until the SINGLE ball is holed. The term foursome is a common reference to any group of 4 players on the course.",
+      "definition": "In match play, a contest between two sides each consisting of a pair of players, where the 2 partners hit alternate shots on one ball. The first player tees off, the second player hits the second shot, the first player hits the third shot, and so on until the ball is holed. Also partners alternate their tee shots, so that one member of each team will always tee-off on the odd holes and the other will tee off on the even holes. The term foursome is a common reference to any group of 4 players on the course.",
       "relatedTerms": []
     },
     {
@@ -201,7 +201,7 @@
     },
     {
       "term": "Gimme",
-      "definition": "Refers to a putt that the other players agree can count automatically without actually being played (under the tacit assumption that the putt would not have been missed). \"Gimmes\" are not allowed by the rules in stroke play, but they are often practiced in casual matches. However, in match play, either player may formally concede a stroke, a hole, or the entire match at any time, and this may not be refused or withdrawn. A player in match play will generally concede a tap-in or other short putt by their opponent.",
+      "definition": "Refers to a putt that the other players agree can count automatically without actually being played (under the tacit assumption that the putt would not have been missed). \"Gimmes\" are not allowed by the rules in stroke play, but they are often practiced in casual matches. However, in match play, either player may formally concede a stroke, a hole, or the entire match at any time, and this may not be refused or withdrawn.",
       "relatedTerms": []
     },
     {
@@ -211,7 +211,7 @@
     },
     {
       "term": "Grain",
-      "definition": "The direction in which the grass grows, specifically on the green (see below). Depending on the variety of grass used on the green and mowing patterns, grain can significantly influence the speed and movement of a putt.",
+      "definition": "The direction in which the grass grows, specifically on the green. Depending on the variety of grass used on the green and mowing patterns, grain can significantly influence the speed and movement of a putt.",
       "relatedTerms": []
     },
     {
@@ -230,13 +230,13 @@
       "relatedTerms": []
     },
     {
-      "term": "Ground Under Repair (GUR)",
-      "definition": "An area of the golf course that is being repaired. A free drop is allowed if the ball lands in an area marked \"GUR\".",
+      "term": "Ground Under Repair",
+      "definition": "An area of the golf course that is being repaired. A free drop is allowed if the ball lands in a marked area.",
       "relatedTerms": []
     },
     {
       "term": "Grounding The Club",
-      "definition": "To place the club-face behind the ball on the ground at address. Grounding the club is prohibited in bunkers or when playing from any marked hazard.",
+      "definition": "To place the club-face behind the ball on the ground at address. Grounding the club is prohibited in bunkers.",
       "relatedTerms": []
     },
     {
@@ -251,12 +251,12 @@
     },
     {
       "term": "Hazard",
-      "definition": "Any bunker or permanent water including any ground marked as part of that water hazard. Special rules apply when playing from a hazard.",
+      "definition": "Any bunker or permanent water including any ground marked as part of that water hazard.",
       "relatedTerms": []
     },
     {
       "term": "Hook",
-      "definition": "A shot that curves sharply right-to-left for right-handed golfers (or left-to-right for left-handed golfers). Under normal circumstances, a hook is unintentional and caused by a closed clubface; however, good players can use a hook to their advantage in certain situations.",
+      "definition": "A shot that curves sharply right-to-left for right-handed golfers (or left-to-right for left-handed golfers).",
       "relatedTerms": []
     },
     {
@@ -271,7 +271,7 @@
     },
     {
       "term": "Lag",
-      "definition": "(i) A long putt designed to simply get the ball close to the hole. (ii) During the downswing, how far the club-head \"lags\" behind the hands prior to release.",
+      "definition": "1. A long putt designed to simply get the ball close to the hole. 2. During the downswing, how far the club-head \"lags\" behind the hands prior to release.",
       "relatedTerms": []
     },
     {
@@ -281,12 +281,12 @@
     },
     {
       "term": "Lay-Up",
-      "definition": "A stroke deliberately played with a shorter range club than to reach the pin, in order to position the ball in a certain spot. This may be done to ensure a more comfortable next stroke or to avoid a hazard.",
+      "definition": "A stroke deliberately played with a shorter range club than to reach the pin, in order to position the ball in a certain spot.",
       "relatedTerms": []
     },
     {
       "term": "Lie",
-      "definition": "(i) How the ball is resting on the ground, which may add to the difficulty of the next stroke. (ii) The angle between the center of the shaft and the sole of the club-head.",
+      "definition": "How the ball is resting on the ground, which may add to the difficulty of the next stroke.",
       "relatedTerms": []
     },
     {
@@ -296,7 +296,7 @@
     },
     {
       "term": "Lob",
-      "definition": "a short, high arc shot, often produced with a lob wedge.",
+      "definition": "A short, high arc shot, often produced with a lob wedge.",
       "relatedTerms": []
     },
     {
@@ -321,12 +321,12 @@
     },
     {
       "term": "Movable Obstruction",
-      "definition": "An obstruction that can be moved with reasonable effort and without damaging either the course or the obstruction. Obstructions are artificial items such as rakes, towels, or vehicles. A player may move a movable obstruction and if in doing so the ball is moved, it is replaced without penalty. This is different to a loose impediment.",
+      "definition": "An obstruction that can be moved with reasonable effort and without damaging either the course or the obstruction. Obstructions are artificial items such as rakes, towels, or vehicles. A player may move a movable obstruction and if in doing so the ball is moved, it is replaced without penalty.",
       "relatedTerms": []
     },
     {
       "term": "Mulligan",
-      "definition": "A do-over, or replay of the shot, without counting the shot as a stroke and without assessing any penalties that might apply. It is not allowed by the rules and not practiced in tournaments, but is common in casual rounds in some countries, especially the United States.",
+      "definition": "A do-over, or replay of the shot, without counting the shot as a stroke and without assessing any penalties that might apply. It is not allowed by the rules and not practiced in tournaments, but sometimes occurs in casual rounds.",
       "relatedTerms": []
     },
     {
@@ -341,12 +341,12 @@
     },
     {
       "term": "Par",
-      "definition": "Standard score for a hole (defined by its length) or a course (sum of all the holes' pars).",
+      "definition": "Standard score for a hole (defined by its length and/or difficulty).",
       "relatedTerms": []
     },
     {
       "term": "Penalty Area",
-      "definition": "The official term used by the Rules of Golf since their 2019 revision to refer to what was once known as a water hazard. Penalty areas are subdivided into yellow and red penalty areas, each demarcated by correspondingly colored lines and/or stakes. The type of penalty area determines how one is permitted to take relief when their ball comes to rest within them. Unlike the former water hazard, a player is now permitted to ground their club when playing a stroke from a penalty area.",
+      "definition": "The official term used by the Rules of Golf since their 2019 revision to refer to what was once known as a water hazard. Penalty areas are subdivided into yellow and red penalty areas, each demarcated by correspondingly colored lines and/or stakes. The type of penalty area determines how one is permitted to take relief when their ball comes to rest within them.",
       "relatedTerms": []
     },
     {
@@ -356,12 +356,12 @@
     },
     {
       "term": "Pitch",
-      "definition": "A short shot (typically from within 50 yards or meters), usually played with a higher lofted club and made using a less than full swing, that is intended to flight the ball toward a target (usually the hole) with greater accuracy than a full iron shot.",
+      "definition": "A short shot (typically from within 50 yards), usually played with a higher lofted club and made using a less than full swing, that is intended to flight the ball toward a target (usually the hole) with greater accuracy than a full iron shot.",
       "relatedTerms": []
     },
     {
       "term": "Pitch Mark",
-      "definition": "A divot on the green caused when a ball lands. Players must repair their pitch marks, usually with a tee or a divot tool.",
+      "definition": "A divot on the green caused when a ball lands. Players should always repair their pitch marks, usually with a tee or a divot tool.",
       "relatedTerms": []
     },
     {
@@ -375,13 +375,13 @@
       "relatedTerms": []
     },
     {
-      "term": "Provisional Ball (Rule 18.3)",
-      "definition": "\"The provisional ball Rule is one of the most useful Rules in the book. If, after playing a shot, you think your ball may be lost outside of a penalty area or out of bounds, you should play a provisional ball. The purpose of the Rule is to save time, hence the best time to play a provisional ball is before you go forward to search for the original ball, especially if it is some 200-250 yards away.\"",
+      "term": "Provisional Ball",
+      "definition": "If, after playing a shot, you think your ball may be lost outside of a penalty area or out of bounds, you should play a provisional ball. The purpose of the Rule is to save time, hence the best time to play a provisional ball is before you go forward to search for the original ball, especially if it is some 200-250 yards away.",
       "relatedTerms": []
     },
     {
       "term": "Punch Shot",
-      "definition": "A shot played with a very low trajectory, usually to avoid interference from tree branches when a player is hitting from the woods. Similar to the knock-down, it can also be used to avoid high winds. Also known as a stinger. Depending on the angle of attack upon impact, stingers can stay low or climb later in the ball flight due to the backspin caused by a steep angle of attack, typically with a low-lofted club.",
+      "definition": "A shot played with a very low trajectory, usually to avoid interference from tree branches when a player is hitting from the woods. Similar to the knock-down, it can also be used to avoid high winds. Also known as a stinger.",
       "relatedTerms": []
     },
     {
@@ -391,7 +391,7 @@
     },
     {
       "term": "Sandy (Or Sandie)",
-      "definition": "A score of par or better that includes a bunker shot. Sandys are counted as points in some social golf games. If a par or better is achieved after hitting two or three bunker shots on the same hole, the terms double sandy or triple sandy are used, respectively. See Funnies.",
+      "definition": "A score of par or better that includes a bunker shot. Sandys are counted as points in some social golf games. If a par or better is achieved after hitting two or three bunker shots on the same hole, the terms double sandy or triple sandy are used, respectively.",
       "relatedTerms": []
     },
     {
@@ -401,7 +401,7 @@
     },
     {
       "term": "Scramble",
-      "definition": "(i) When a player misses the green in regulation, but still makes par or better on a hole. Scrambling percentage is used a measure of short game proficiency. (ii) A two or four man format, similar to Best Ball, except in a scramble, each player strikes a shot, the best shot is selected, then all players play from that selected position.",
+      "definition": "1. When a player misses the green in regulation, but still makes par or better on a hole. Scrambling percentage is used a measure of short game proficiency. 2. A two or four man format, similar to Best Ball, except in a scramble, each player strikes a shot, the best shot is selected, then all players play from that selected position.",
       "relatedTerms": []
     },
     {
@@ -416,7 +416,7 @@
     },
     {
       "term": "Shank",
-      "definition": "A shot in which the golf ball is struck by the hosel of the club and travels a relatively short distance at a severe angle to the target. A golfer who regularly hits the ball out of the hosel is said to be affected by the \"shanks\".",
+      "definition": "A shot in which the golf ball is struck by the hosel of the club and travels a relatively short distance at a severe angle to the target.",
       "relatedTerms": []
     },
     {
@@ -431,7 +431,7 @@
     },
     {
       "term": "Slice",
-      "definition": "A shot that curves sharply left-to-right for right-handed golfers (or right-to-left for left-handed golfers). Under normal circumstances, a slice is unintentional and caused by an open clubface; however, good players can use a slice to their advantage in certain situations. Slices are often the most common miss for below-average players. A shot that follows the same trajectory but to a lesser degree is referred to as a fade. A fade is often intentionally used by above-average players to achieve a certain type of spin. The curved shape of the ball-flight is the result of sideways spin. For that reason a \"slice\" does not refer to a putt.",
+      "definition": "A shot that curves sharply left-to-right for right-handed golfers (or right-to-left for left-handed golfers). Under normal circumstances, a slice is unintentional and caused by an open clubface; however, good players can use a slice to their advantage in certain situations.",
       "relatedTerms": []
     },
     {
@@ -441,7 +441,7 @@
     },
     {
       "term": "Snap Hook",
-      "definition": "A severe hook that usually goes directly left as well as curving from right to left, for a right-handed golfer. A snap hook is when a severe left to right hook occurs for a left-handed golfer.",
+      "definition": "A severe hook that usually goes directly left as well as curving from right to left, for a right-handed golfer.",
       "relatedTerms": []
     },
     {
@@ -486,7 +486,7 @@
     },
     {
       "term": "Thin Shot",
-      "definition": "Usually, an unintentional, poor shot where the club-head strikes too high on the ball. When taken to an extreme but still at or below the center-line of the ball, it is known \"blading\" the ball. Sometimes, when the ball is lying a certain way around the green, advanced players will intentionally hit a thin shot to achieve certain results.",
+      "definition": "Usually, an unintentional, poor shot where the club-head strikes too high on the ball. When taken to an extreme but still at or below the center-line of the ball, it is known \"blading\" the ball.",
       "relatedTerms": []
     },
     {
