@@ -1,0 +1,79 @@
+﻿{
+  "slug": "golf-etiquette",
+  "title": "Golf Etiquette",
+  "subtitle": "Golf is called a gentleman's game because it relies heavily on personal integrity, self-regulation, and deep-seated etiquette.",
+  "heroImage": "",
+  "summary": "The golf course is a shared space. Have fun, but have respect. Not everyone is going to share the same beliefs on how a round should be, but keeping these guidelines in mind will help everyone have a more enjoyable experience. There's a good reason why these ideas are pretty much universally accepted by those deep in the game.",
+  "sections": [
+    {
+      "title": "Before You Play",
+      "intro": "A little preparation can make your first round much more enjoyable.",
+      "items": [
+        {
+          "title": "Arrive Early",
+          "text": "Give yourself enough time to check in, get your equipment ready, and warm up."
+        },
+        {
+          "title": "Check the Course",
+          "text": "Take a few minutes to understand the layout and any local rules."
+        }
+      ]
+    },
+    {
+      "title": "On the Course",
+      "intro": "The course is a shared space. Be considerate of other players and the course.",
+      "items": [
+        {
+          "title": "Quietly Observe",
+          "text": "If you are not playing, quietly observe the game. Don't talk to other players, unless you are playing with them. If you are playing with other players, keep your conversations to a minimum."
+        },
+        {
+          "title": "Plan Ahead",
+          "text": "Begin planning your next shot as you approach the ball by studying the strength and direction of the wind."
+        },
+        {
+          "title": "Limit Pre-Shot Routines",
+          "text": "Limit your pre-shot routines to 30 seconds or less. This will help you stay focused and in the moment."
+        },
+        {
+          "title": "Play \"Ready Golf\"",
+          "text": "From the time you select your club until you actually hit your shot, you should take no more than 30 to 45 seconds. If you aren't ready to play when it is your turn, encourage one of your fellow players to play."
+        }
+      ]
+    },
+    {
+      "title": "Course Maintenance and Care",
+      "items": [
+        {
+          "title": "Repair Divots",
+          "text": "Turf tends to explode on impact, making it difficult, if not impossible, to replace the divot. In this case, you can either use the toe of your shoe to kick in the turf around the edges of the divot or use the provided soil/seed mixture on your cart to fill in the divot."
+        },
+        {
+          "title": "Rake Bunkers",
+          "text": "Bring the rake into the bunker with you. Always enter the bunker from the low side at a point nearest to the ball, avoiding walking on the steep face of a bunker. After hitting your shot, rake the area you played from, as well as all your footprints and any others within reach. Rakes should be left either in or nearby the bunker."
+        },
+        {
+          "title": "",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "title": "On the Putting Green",
+      "items": [
+        {
+          "title": "Repair Pitch Marks",
+          "text": "Repair any pitch marks or indentations caused by the ball hitting the green. Using a tee, knife, key or repair tool, repair the mark by working the edges towards the center, without lifting the center of the mark. Don't tear the grass. Finish by smoothing the area with a club or your foot. Try to get the area smooth enough to putt over."
+        },
+        {
+          "title": "Lines of Play",
+          "text": "Never step on a fellow player's putting line (the path between their ball and the hole)."
+        },
+        {
+          "title": "Tending the Flag",
+          "text": "If you need to tend the flag, do so by gently pulling it out and then replacing it. Don't rip the flag out of the ground."
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,8 @@
     "title": "Danny Maude",
     "url": "https://www.youtube.com/@DanielMaude",
     "kind": "youtube",
-    "description": "Feel-based swing thoughts without the jargon pile-on."
+    "description": "Feel-based swing thoughts without the jargon pile-on.",
+    "recommended": true
   },
   {
     "title": "Me and My Golf",
@@ -16,15 +17,13 @@
     "title": "Padraig Harrington",
     "url": "https://www.youtube.com/@PadraigHarringtonOfficial",
     "kind": "youtube",
-    "description": "Official YouTube channel of 3x champion and 25-year European and PGA tour veteran, Padraig Harrington.",
-    "recommended": true
+    "description": "Official YouTube channel of 3x champion and 25-year European and PGA tour veteran, Padraig Harrington."
   },
   {
     "title": "Rick Shiels Golf",
     "url": "https://www.youtube.com/@RickShielsPGA",
     "kind": "youtube",
-    "description": "Club tests, course vlogs, and accessible instruction.",
-    "recommended": true
+    "description": "Club tests, course vlogs, and accessible instruction."
   },
   {
     "title": "USGA",
@@ -38,6 +37,18 @@
     "url": "https://www.pgatour.com/",
     "kind": "website",
     "description": "Schedules, leaderboards, and course previews."
+  },
+  {
+    "title": "LPGA Tour",
+    "url": "https://www.lpga.com/",
+    "kind": "website",
+    "description": "Leaderboards, athlets, stats and more."
+  },
+  {
+    "title": "PGA Champions Tour",
+    "url": "https://www.pgatour.com/pgatour-champions",
+    "kind": "website",
+    "description": "Schedules, leaderboards, players, stats and more."
   },
   {
     "title": "My Golf Spy",

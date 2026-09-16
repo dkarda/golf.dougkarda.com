@@ -8,6 +8,7 @@ import CourseDetail from './pages/CourseDetail.tsx'
 import Courses from './pages/Courses.tsx'
 import Home from './pages/Home.tsx'
 import Links from './pages/Links.tsx'
+import Rules from './pages/Rules.tsx'
 import NoteDetail from './pages/NoteDetail.tsx'
 import Notes from './pages/Notes.tsx'
 import Glossary from './pages/Glossary.tsx'
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')!).render(
           <Route index element={<Home />} />
           <Route path="courses" element={<Courses />} />
           <Route path="courses/:id" element={<CourseDetail />} />
+          <Route path="rules" element={<Rules />} />
           <Route path="bag" element={<Bag />} />
           <Route path="notes" element={<Notes />} />
           <Route path="notes/:slug" element={<NoteDetail />} />

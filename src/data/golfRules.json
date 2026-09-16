@@ -1,0 +1,32 @@
+﻿[
+  {
+    "title": "USGA Rules of Golf",
+    "url": "https://rules.usga.org/rules/rules-and-clarifications/rules-and-clarifications.html",
+    "kind": "website",
+    "description": "The official rules of golf as set by the USGA."
+  },
+  {
+    "title": "R&A Rules of Golf",
+    "url": "https://www.randa.org/en/rog/the-rules-of-golf",
+    "kind": "website",
+    "description": "The official rules of golf as set by the R&A."
+  },
+  {
+    "title": "Every Golf Rule Explained Like You're 10",
+    "url": "https://www.youtube.com/watch?v=DEdBrMUHmmI",
+    "kind": "youtube",
+    "description": "This video breaks down the most important rules in plain English so you know what to do on the course, avoid penalty strokes, and keep your round moving."
+  },
+  {
+    "title": "R&A: A quick guide to the rules",
+    "url": "https://www.youtube.com/watch?v=qyoeL_pMJzI",
+    "kind": "youtube",
+    "description": "This video covers 16 key themes including what to do before starting your round, understanding the different areas of the course,  and how to proceed when you can't play the ball as it lies."
+  },
+  {
+    "title": "USGA",
+    "url": "https://www.usga.org/",
+    "kind": "website",
+    "description": "Rules, handicapping, and championships."
+  }
+]

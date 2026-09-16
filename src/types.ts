@@ -83,6 +83,16 @@ export type GolfLink = {
   recommended?: boolean
 }
 
+export type RuleKind = 'youtube' | 'website'
+
+export type GolfRule = {
+  title: string
+  url: string
+  kind: RuleKind
+  description?: string
+  recommended?: boolean
+}
+
 export type GolfGlossary = {
   term: string
   definition: string
