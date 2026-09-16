@@ -67,8 +67,7 @@ export default function Courses() {
     <section className="mx-auto max-w-5xl px-4 py-10">
       <PageHeader title="Courses" eyebrow="My list + search">
         <p>
-          Curated rounds I care about, plus live search of US courses via
-          OpenGolfAPI. Open a course to see the scorecard and map.
+          A collection of courses I've played or have an interest in playing. If there's a golf ball image next to a course, that means I've played it. If the course exists in the OpenGolfAPI, you can click it to view course details, including the scorecard, map and more.
         </p>
       </PageHeader>
 

@@ -37,7 +37,7 @@ export default function Links() {
   return (
     <section className="mx-auto max-w-5xl px-4 py-10">
       <PageHeader title="Links" eyebrow="Watch & read">
-        <p>Recommended channels and sites.</p>
+        <p>Recommended channels and sites for educational content and to follow the game.</p>
       </PageHeader>
 
       {groups.length === 0 && (
