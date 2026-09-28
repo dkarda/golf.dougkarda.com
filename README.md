@@ -86,3 +86,15 @@ export default defineConfig([
 ])
 
 ```
+
+#Photo handling
+- Course main photos belong in `public/images/courses/` (served as `/images/courses/`).
+- Logo balls: `public/images/logoballs/`
+- Scorecards: `public/images/scorecards/`
+- Course maps: `public/images/coursemaps/`
+
+## How to add a course main image
+- Put the file in `public/images/courses/`
+- Set `"mainImg"` in `src/data/golfCourses.json` to the filename only
+- Run `npm run build` (or `npm run dev` to preview)
+- Deploy `dist/` so `dist/images/courses/` goes to the host with `index.html`

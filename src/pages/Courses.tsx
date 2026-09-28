@@ -11,9 +11,10 @@ import {
   coursePlace,
   courseTitle,
   isOpenGolfCourseId,
+  loadGolfCourses,
   publishedCourses,
   resolveLogoBallImage,
-  loadGolfCourses,
+  uniqueCourseStates,
 } from '../lib/courses'
 import { courseDisplayName, searchCourses } from '../lib/opengolf'
 import type { CourseSearchHit } from '../types'
@@ -54,7 +55,12 @@ export default function Courses() {
   const results =
     searching && fetched?.q === debounced && !fetched.error ? fetched.hits : []
 
+  const [stateFilter, setStateFilter] = useState('')
   const myCourses = publishedCourses(loadGolfCourses())
+  const states = uniqueCourseStates(myCourses)
+  const visibleCourses = stateFilter
+    ? myCourses.filter((c) => c.state === stateFilter)
+    : myCourses
   const myIds = useMemo(
     () =>
       new Set(
@@ -71,9 +77,29 @@ export default function Courses() {
         </p>
       </PageHeader>
 
-    <SectionLabel>My Courses</SectionLabel>
-      <div className="mb-10 grid gap-4 sm:grid-cols-2">
-        {myCourses.map((course, index) => {
+      <div className="mb-3 flex flex-wrap items-end justify-between gap-3">
+        <SectionLabel>My Courses</SectionLabel>
+        <label className="block text-sm">
+          <span className="mr-2 text-ink/90 font-bold">State filter:</span>
+          <select
+            value={stateFilter}
+            onChange={(e) => setStateFilter(e.target.value)}
+            className="rounded-lg border border-fairway/20 bg-white px-3 py-2 outline-none focus:border-gold w-full"
+          >
+            <option value="">All states</option>
+            {states.map((state) => (
+              <option key={state} value={state}>
+                {state}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+      {visibleCourses.length === 0 ? (
+        <p className="mb-10 text-sm text-ink/70">No courses in this state.</p>
+      ) : (
+        <div className="mb-10 grid gap-4 sm:grid-cols-2">
+        {visibleCourses.map((course, index) => {
           const logoSrc = resolveLogoBallImage(course.logoBallImg)
           const title = courseTitle(course)
           const meta = coursePlace(course)
@@ -99,6 +125,7 @@ export default function Courses() {
           )
         })}
       </div>
+      )}
 
       <SectionLabel>Search any US course</SectionLabel>
       <label className="mb-4 block">

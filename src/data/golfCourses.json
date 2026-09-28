@@ -6,7 +6,7 @@
 		"state": "Arizona",
 		"region": "Phoenix Metro",
 		"logoBallImg": "logoball-500club.jpg",
-		"mainImg": "500-club-main.jpg",
+		"mainImg": "500-club-main.webp",
 		"scorecard": "",
 		"courseMap": ""
 	},
@@ -17,7 +17,7 @@
 		"state": "Arizona",
 		"region": "Phoenix Metro",
 		"logoBallImg": "logoball-aguila.jpg",
-		"mainImg": "aguila-main.jpg",
+		"mainImg": "aguila-main.webp",
 		"scorecard": "",
 		"courseMap": ""
 	},
@@ -32,7 +32,7 @@
 		"website": "https://www.arrowheadcolorado.com/",
 		"teetime": "https://arrowheadpp.ezlinksgolf.com/index.html?utm_source=google&utm_medium=organic#/search",
 		"logoBallImg": "logoball-arrowhead.jpg",
-		"mainImg": "arrowhead-main.jpg",
+		"mainImg": "arrowhead-main.webp",
 		"scorecard": "scorecard-arrowhead.jpg",
 		"courseMap": "coursemap-arrowhead.jpg"
 	},
@@ -43,7 +43,7 @@
 		"state": "New Jersey",
 		"region": "Greater Atlantic City",
 		"logoBallImg": "",
-		"mainImg": "ballamore-main.jpg",
+		"mainImg": "ballamore-main.webp",
 		"scorecard": "",
 		"courseMap": ""
 	},
@@ -58,7 +58,7 @@
 		"website": "https://www.bergenpointgolf.com/",
 		"teetime": "https://www.bergenpointgolf.com/tee-times.html",
 		"logoBallImg": "logoball-bergenpoint.jpg",
-		"mainImg": "bergen-point-main.jpg",
+		"mainImg": "bergen-point-main.webp",
 		"scorecard": "scorecard-bergenpoint.png",
 		"courseMap": "coursemap-bergenpoint.png"
 	},
@@ -148,7 +148,7 @@
 		"website": "https://www.blueheronpines.com/",
 		"teetime": "https://www.blueheronpines.com/",
 		"logoBallImg": "logoball-blueheron.jpg",
-		"mainImg": "",
+		"mainImg": "blue-heron-main.jpeg",
 		"scorecard": "scorecard-blueheron.jpg",
 		"courseMap": "coursemap-blueheron.jpg"
 	},
@@ -163,7 +163,7 @@
 		"website": "http://www.brentwoodccgolf.com/",
 		"teetime": "https://foreupsoftware.com/index.php/booking/index/19105#/",
 		"logoBallImg": "logoball-default.jpg",
-		"mainImg": "",
+		"mainImg": "brentwood-main.jpeg",
 		"scorecard": "scorecard-brentwood.png",
 		"courseMap": "coursemap-brentwood.png"
 	},
@@ -178,7 +178,7 @@
 		"website": "https://www.brigantinegolf.com/",
 		"teetime": "https://www.brigantinegolf.com/tee-times/",
 		"logoBallImg": "logoball-brigantine.jpg",
-		"mainImg": "",
+		"mainImg": "brigantine-main.jpeg",
 		"scorecard": "scorecard-brigantine.jpg",
 		"courseMap": "coursemap-brigantine.jpg"
 	},
@@ -193,7 +193,7 @@
 		"website": "http://www.brokenteegolf.com/",
 		"teetime": "http://www.brokenteegolf.com/golf",
 		"logoBallImg": "logoball-broken-tee.jpg",
-		"mainImg": "",
+		"mainImg": "broken-tee-main.jpeg",
 		"scorecard": "scorecard-brokentee.jpg",
 		"courseMap": ""
 	},
@@ -208,34 +208,20 @@
 		"website": "http://www.brokenteegolf.com/",
 		"teetime": "http://www.brokenteegolf.com/golf",
 		"logoBallImg": "logoball-broken-tee.jpg",
-		"mainImg": "",
+		"mainImg": "broken-tee-par3-main.jpeg",
 		"scorecard": "scorecard-brokenteepar3.jpg",
-		"courseMap": ""
-	},
-	{
-		"course": "Calverton Links",
-	    "id": "",
-		"played": "No",
-		"address": "149 Edwards Avem, Calverton, NY, 11933",
-		"state": "New York",
-		"region": "Suffolk County",
-		"phone": "closed",
-		"website": "closed",
-		"teetime": "closed",
-		"logoBallImg": "",
-		"mainImg": "",
-		"scorecard": "",
 		"courseMap": ""
 	},
 	{
 		"course": "Cantiague Park Golf Course",
 	    "id": "15f6bee3-7f20-4d16-877f-56f7365b1b5d",
 		"played": "Yes",
+		"state": "New York",
 		"phone": "(516) 571-7061",
 		"website": "https://www.nassaucountyny.gov/1786/Cantiague-Park",
 		"teetime": "https://www.nassaucountyny.gov/egov/parks/wbwsc/webtrac.wsc//wbsplash.html?wbp=1",
 		"logoBallImg": "logoball-default.jpg",
-		"mainImg": "",
+		"mainImg": "cantiague-park-golf-course-main.webp",
 		"scorecard": "",
 		"courseMap": ""
 	},
@@ -250,7 +236,7 @@
 		"website": "http://www.cedarsgolfclub.com/",
 		"teetime": "https://teewire.net/cedarsgolfclub/",
 		"logoBallImg": "logoball-ceders.jpg",
-		"mainImg": "",
+		"mainImg": "cedars-golf-main.jpeg",
 		"scorecard": "",
 		"courseMap": ""
 	},
@@ -295,7 +281,7 @@
 		"website": "https://www.nassaucountyny.gov/1787/Christopher-Morley-Park",
 		"teetime": "n/a",
 		"logoBallImg": "logoball-default.jpg",
-		"mainImg": "",
+		"mainImg": "christopher-morley-main.jpeg",
 		"scorecard": "",
 		"courseMap": ""
 	},
@@ -319,7 +305,7 @@
 	    "id": "",
 		"played": "Yes",
 		"address": "Punta Cana 23301, Dominican Republic",
-		"state": "Dominican Republic",
+		"state": "International",
 		"region": "Other",
 		"phone": "(809) 687-4653",
 		"website": "http://www.cocotalgolf.com/",
@@ -340,7 +326,7 @@
 		"website": "http://www.crabmeadow.com/",
 		"teetime": "https://www.crabmeadow.com/tee-times/",
 		"logoBallImg": "logoball-default.jpg",
-		"mainImg": "",
+		"mainImg": "crab-meadow-main.jpeg",
 		"scorecard": "scorecard-crabmeadow.jpg",
 		"courseMap": ""
 	},
@@ -974,7 +960,7 @@
 	{
 		"course": "Mill Pond Golf Course",
 		"id": "82a66091-618f-4038-a008-ad53c0514fdb",
-		"played": "No",
+		"played": "Yes",
 		"address": "300 Mill Rd, Medford, NY 11763",
 		"state": "New York",
 		"region": "Suffolk County",

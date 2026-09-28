@@ -182,7 +182,6 @@ function CourseDetailBody({ id }: { id: string }) {
         tees={course.tees ?? []}
         holes={course.holes_data ?? []}
       />
-
     </section>
   )
 }
