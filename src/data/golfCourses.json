@@ -39,10 +39,10 @@
 	{
 		"course": "Ballamor Golf Club",
 	    "id": "30d2541a-c16c-4ed3-84e4-28d68d22ac55",
-		"played": "No",
+		"played": "Yes",
 		"state": "New Jersey",
 		"region": "Greater Atlantic City",
-		"logoBallImg": "",
+		"logoBallImg": "logoball-ballamor.jpg",
 		"mainImg": "ballamore-main.webp",
 		"scorecard": "",
 		"courseMap": ""
@@ -1318,14 +1318,14 @@
 	{
 		"course": "Blue Green At Sunken Meadow State Park",
 		"id": "8cebe069-6f85-407d-938f-ecad94b6c734",
-		"played": "No",
+		"played": "Yes",
 		"address": "Suan Ct, Fort Salonga, NY 11768",
 		"state": "New York",
 		"region": "Suffolk County",
 		"phone": "(631) 269-5351",
 		"website": "https://www.sunkenmeadowgolf.com/",
 		"teetime": "https://foreupsoftware.com/index.php/booking/19766/2437#welcome",
-		"logoBallImg": "",
+		"logoBallImg": "logoball-sunkenmeadow.jpg",
 		"mainImg": "",
 		"scorecard": "",
 		"courseMap": ""
