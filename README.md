@@ -92,6 +92,7 @@ export default defineConfig([
 - Logo balls: `public/images/logoballs/`
 - Scorecards: `public/images/scorecards/`
 - Course maps: `public/images/coursemaps/`
+- Course image: get from https://www.golfpass.com/
 
 ## How to add a course main image
 - Put the file in `public/images/courses/`
