@@ -56,11 +56,19 @@ export default function Courses() {
     searching && fetched?.q === debounced && !fetched.error ? fetched.hits : []
 
   const [stateFilter, setStateFilter] = useState('')
+  const [nameFilter, setNameFilter] = useState('')
   const myCourses = publishedCourses(loadGolfCourses())
   const states = uniqueCourseStates(myCourses)
-  const visibleCourses = stateFilter
-    ? myCourses.filter((c) => c.state === stateFilter)
-    : myCourses
+  const nameQuery = nameFilter.trim().toLowerCase()
+  const visibleCourses = myCourses.filter((c) => {
+    if (stateFilter && c.state !== stateFilter) return false
+    if (!nameQuery) return true
+    const haystack = [courseTitle(c), coursePlace(c), c.address]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase()
+    return haystack.includes(nameQuery)
+  })
   const myIds = useMemo(
     () =>
       new Set(
@@ -79,24 +87,36 @@ export default function Courses() {
 
       <div className="mb-3 flex flex-wrap items-end justify-between gap-3">
         <SectionLabel>My Courses</SectionLabel>
-        <label className="block text-sm">
-          <span className="mr-2 text-ink/90 font-bold">State filter:</span>
-          <select
-            value={stateFilter}
-            onChange={(e) => setStateFilter(e.target.value)}
-            className="rounded-lg border border-fairway/20 bg-white px-3 py-2 outline-none focus:border-gold w-full"
-          >
-            <option value="">All states</option>
-            {states.map((state) => (
-              <option key={state} value={state}>
-                {state}
-              </option>
-            ))}
-          </select>
-        </label>
+        <div className="flex flex-wrap items-end gap-3">
+          <label className="block min-w-[12rem] flex-1 text-sm">
+            <span className="mr-2 text-ink/90 font-bold">Filter list:</span>
+            <input
+              type="search"
+              value={nameFilter}
+              onChange={(e) => setNameFilter(e.target.value)}
+              placeholder="Course name or place…"
+              className="w-full rounded-lg border border-fairway/20 bg-white px-3 py-2 outline-none focus:border-gold"
+            />
+          </label>
+          <label className="block text-sm">
+            <span className="mr-2 text-ink/90 font-bold">State filter:</span>
+            <select
+              value={stateFilter}
+              onChange={(e) => setStateFilter(e.target.value)}
+              className="w-full rounded-lg border border-fairway/20 bg-white px-3 py-2 outline-none focus:border-gold"
+            >
+              <option value="">All states</option>
+              {states.map((state) => (
+                <option key={state} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
       </div>
       {visibleCourses.length === 0 ? (
-        <p className="mb-10 text-sm text-ink/70">No courses in this state.</p>
+        <p className="mb-10 text-sm text-ink/70">No courses match that filter.</p>
       ) : (
         <div className="mb-10 grid gap-4 sm:grid-cols-2">
         {visibleCourses.map((course, index) => {
